@@ -27,7 +27,7 @@ def main():
             number = int(number)
         except ValueError:
             print('Требуется целое число.')
-        if number < 2 or number > 1e5:      # единицу н относят к простым числам
+        if number < 2 or number > 1e5:      # единицу не относят к простым числам
             print('Требуется число в диапазоне 2 - 100 000.')
         else:
             if is_simple(number):
