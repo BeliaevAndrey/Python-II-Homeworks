@@ -16,7 +16,6 @@ def find_number():
                          f'\nВведите целое число в диапазоне {LOWER_LIMIT} - {UPPER_LIMIT}: '))
     counter = 9
     while counter > 0:
-        counter -= 1
         if user_num < comp_num:
             print(f'{user_num} меньше загаданного числа')
         elif user_num > comp_num:
@@ -25,6 +24,7 @@ def find_number():
             print(f'{user_num} = {comp_num} Угадано!')
             break
         user_num = int(input(f'осталось {counter} попыток. \nВведите целое число: '))
+        counter -= 1
     else:
         print('Попытки закончились')
 
