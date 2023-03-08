@@ -10,7 +10,7 @@ LOWER_LIMIT = 0
 UPPER_LIMIT = 1000
 
 
-def find_number():
+def find_number() -> None:
     comp_num = randint(LOWER_LIMIT, UPPER_LIMIT)
     user_num = int(input(f'Чтобы угадать число есть 10 попыток. '
                          f'\nВведите целое число в диапазоне {LOWER_LIMIT} - {UPPER_LIMIT}: '))
