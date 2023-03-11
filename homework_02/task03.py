@@ -14,17 +14,12 @@ def read_fractions(frac_num: str | int = 'n') -> str:
 
 def gcd(a: int, b: int) -> int:
     """
-    Simplest Greatest Common Divisor search
-    :param a: int
-    :param b: int
-    :return: int
+    recursive try
+    :param a:
+    :param b:
+    :return:
     """
-    while a != b:
-        if a > b:
-            a -= b
-        else:
-            b -= a
-    return a
+    return (b and gcd(b, a % b)) or a
 
 
 def calc_summ(first: tuple, second: tuple) -> str:
