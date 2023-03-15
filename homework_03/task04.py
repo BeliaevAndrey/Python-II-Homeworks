@@ -50,8 +50,6 @@ JOURNEY_STUFF = {
 
 
 def prepare():
-    whole_weight = sum((weight for thing in JOURNEY_STUFF.values() for weight in thing.values()))
-    print(f'{" Whole weight: " + str(round(whole_weight, 3)) + " ":*^50}')
     totals = {item: weight for branch in JOURNEY_STUFF.values() for item, weight in branch.items()}
     return totals
 
@@ -66,7 +64,6 @@ def start_packing(totals: dict) -> tuple[dict, int, dict]:
         while total_weight > BACKPACK_LC:
             dropped = final_pack.popitem()
             total_weight -= dropped[1]
-            dropped_things.setdefault(search(dropped[0]), [])
             dropped_things.get(search(dropped[0])).append(dropped)
 
     return final_pack, total_weight, dropped_things
@@ -92,7 +89,9 @@ def form_table(final_pack: dict, total_weight: int, dropped_things: dict) -> str
                  ])
         return out_list
 
-    out_string = f'{" Backpack weight: " + str(round(total_weight, 3)) + " ":*^50}\n'
+    whole_weight = sum((weight for thing in JOURNEY_STUFF.values() for weight in thing.values()))
+    out_string = f'\n{" Whole weight: " + str(round(whole_weight, 3)) + " ":*^50}\n'
+    out_string += f'{" Backpack weight: " + str(round(total_weight, 3)) + " ":*^50}\n'
     table = {key: [] for key in JOURNEY_STUFF.keys()}
     for item in final_pack.items():
         category = search(item[0])
