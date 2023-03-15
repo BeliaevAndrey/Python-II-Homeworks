@@ -1,0 +1,33 @@
+
+********** Whole weight of stuff: 20.06 **********
+*********** Whole amount of stuff: 30 ************
+************* Backpack weight: 15.0 **************
+*********** Backpack load capacity: 15 ***********
+|         walk         |          camp         |        wardrobe       |        kitchen        |          food         | 
+|-----------------------------------------------------------------------------------------------------------------------|
+| map              0.2 |  axe                2 |  sweater          0.8 |  pot              1.2 |  tinned meat      1.4 | 
+| compass          0.2 |  saw              0.5 |  socks            0.1 |  knife            0.5 |  rice               2 | 
+| bottle of water  1.5 |  tent             2.4 |  pants            0.7 |  spoon           0.05 |  salt             0.2 | 
+|                      |  sleeping bag    0.75 |  shirt            0.5 |                       |                       | 
+|--------------------------------------------------- Dropped things: ---------------------------------------------------|
+|                      |  matches         0.01 |  t-shirt          0.3 |  cup             0.15 |  sugar            0.4 | 
+|                      |  lantern          0.3 |  gloves           0.2 |  fork            0.05 |  tea              0.2 | 
+|                      |  battery          0.2 |                       |                       |  coffee          0.15 | 
+|                      |  radio            0.4 |                       |                       |                       | 
+********** Whole weight of stuff: 20.06 **********
+*********** Whole amount of stuff: 30 ************
+************* Backpack weight: 15.91 *************
+*********** Backpack load capacity: 16 ***********
+|         walk         |          camp         |        wardrobe       |        kitchen        |          food         | 
+|-----------------------------------------------------------------------------------------------------------------------|
+| map              0.2 |  axe                2 |  sweater          0.8 |  pot              1.2 |  tinned meat      1.4 | 
+| compass          0.2 |  saw              0.5 |  socks            0.1 |  knife            0.5 |  rice               2 | 
+| bottle of water  1.5 |  tent             2.4 |  pants            0.7 |  spoon           0.05 |  salt             0.2 | 
+|                      |  sleeping bag    0.75 |  shirt            0.5 |  cup             0.15 |  sugar            0.4 | 
+|                      |  matches         0.01 |  t-shirt          0.3 |  fork            0.05 |                       | 
+|--------------------------------------------------- Dropped things: ---------------------------------------------------|
+|                      |  lantern          0.3 |  gloves           0.2 |                       |  tea              0.2 | 
+|                      |  battery          0.2 |                       |                       |  coffee          0.15 | 
+|                      |  radio            0.4 |                       |                       |                       | 
+|                      |  rope             1.2 |                       |                       |                       | 
+|                      |  book             1.5 |                       |                       |                       | 

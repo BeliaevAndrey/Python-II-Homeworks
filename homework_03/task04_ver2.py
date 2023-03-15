@@ -54,20 +54,29 @@ def prepare():
     return totals
 
 
-def start_packing(totals: dict,
-                  backpack_capacity: float = BACKPACK_LC) -> tuple[dict, int, dict]:
+def repack(backpack_capacity: float = BACKPACK_LC) -> tuple[dict, int, float, dict]:   # totals: dict,
     total_weight = 0
     final_pack = {}
     dropped_things = {key: [] for key in JOURNEY_STUFF.keys()}
-    for i_thing in totals.items():
-        total_weight += i_thing[1]
-        final_pack.setdefault(*i_thing)
-        while total_weight > backpack_capacity:
-            dropped = final_pack.popitem()
-            total_weight -= dropped[1]
-            dropped_things.get(search(dropped[0])).append(dropped)
+    count = 0
+    while abs(total_weight - backpack_capacity) > 0.3:
+        for category in JOURNEY_STUFF.keys():
+            for thing in JOURNEY_STUFF[category].items():
+                if thing[0] not in final_pack.keys():
+                    count += 1
+                    if total_weight + thing[1] < backpack_capacity:
+                        total_weight += thing[1]
+                        final_pack.setdefault(thing[0], thing[1])
+                        break
+                    else:
+                        break
 
-    return final_pack, total_weight, dropped_things
+    for i_key, i_things in JOURNEY_STUFF.items():
+        for j_key, j_weight in i_things.items():
+            if j_key not in final_pack.keys():
+                dropped_things[i_key].append((j_key, j_weight))
+
+    return final_pack, total_weight, backpack_capacity, dropped_things
 
 
 def search(thing: str) -> str:
@@ -76,7 +85,10 @@ def search(thing: str) -> str:
             return i_key
 
 
-def form_table(final_pack: dict, total_weight: int, dropped_things: dict) -> str:
+def form_table(final_pack: dict,
+               total_weight: int,
+               backpack_capacity: float,
+               dropped_things: dict) -> str:
 
     def table_assembly(in_dict: dict, out_list: list = None) -> list:
         longest = len(max(table.values(), key=len))
@@ -91,18 +103,20 @@ def form_table(final_pack: dict, total_weight: int, dropped_things: dict) -> str
         return out_list
 
     whole_weight = sum((weight for thing in JOURNEY_STUFF.values() for weight in thing.values()))
-    out_string = f'\n{" Whole weight: " + str(round(whole_weight, 3)) + " ":*^50}\n'
-    out_string += f'{" Backpack weight: " + str(round(total_weight, 3)) + " ":*^50}\n'
+    whole_amount = sum(map(len, (things for things in JOURNEY_STUFF.values())))
+    out_string = f'\n{" Whole weight of stuff: " + str(round(whole_weight, 3)) + " ":*^50}'
+    out_string += f'\n{" Whole amount of stuff: " + str(whole_amount) + " ":*^50}'
+    out_string += f'\n{" Backpack weight: " + str(round(total_weight, 3)) + " ":*^50}'
+    out_string += f'\n{" Backpack load capacity: " + str(backpack_capacity) + " ":*^50}'
     table = {key: [] for key in JOURNEY_STUFF.keys()}
     for item in final_pack.items():
         category = search(item[0])
         table.setdefault(category, [])
         table[category].append(item)
-    line = '|' + ''.join(f' {key:^20} | ' for key in table.keys()) + '\n|'
-
-    out_string += line + '-'*(len(line) - 5) + '|\n|'
+    head_line = '\n|' + ''.join(f' {key:^20} | ' for key in table.keys()) + '\n|'
+    out_string += head_line + '-' * (len(head_line) - 5) + '|\n|'
     rows = table_assembly(table)
-    rows.append([f'{" Dropped things: ":-^{len(line) - 5}}|'])
+    rows.append([f'{" Dropped things: ":-^{len(head_line) - 5}}|'])
     table_assembly(dropped_things, rows)
 
     out_string += '\n|'.join((''.join(row) for row in rows))
@@ -110,11 +124,11 @@ def form_table(final_pack: dict, total_weight: int, dropped_things: dict) -> str
 
 
 def main():
-    with open('task04_result.txt', 'w', encoding='utf-8') as out_file:
-        report = form_table(*start_packing(prepare()))
+    with open('task04_result_ver2.txt', 'w', encoding='utf-8') as out_file:
+        report = form_table(*repack())
         out_file.write(report)
         print(report)
-        report = form_table(*start_packing(prepare(), 16))
+        report = form_table(*repack(16))
         out_file.write(report)
         print(report)
 
