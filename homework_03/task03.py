@@ -5,7 +5,7 @@ import re
 
 source = dir.__doc__
 
-pattern = re.compile("[\\[\\]\\(\\)<>_\",.?!;:-]")
+pattern = re.compile("[\\[\\]()<>_\",.?!;:-]")
 
 string = source.replace('\n', ' ').replace("'s", '').lower()
 string = ''.join(ch if ch not in pattern.findall(string) else ' ' for ch in string).split()
