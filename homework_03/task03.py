@@ -10,8 +10,8 @@ pattern = re.compile("[\\[\\]\\(\\)<>_\",.?!;:-]")
 string = source.replace('\n', ' ').replace("'s", '').lower()
 string = ''.join(ch if ch not in pattern.findall(string) else ' ' for ch in string).split()
 
-frequency_sort2 = set(string)
+frequency_sort = set(string)
 
-frequency_sort2 = sorted(frequency_sort2, key=lambda w: string.count(w), reverse=True)
+frequency_sort = sorted(frequency_sort, key=lambda w: string.count(w), reverse=True)
 
-print('\n'.join(frequency_sort2[:10]))
+print('\n'.join(frequency_sort[:10]))
