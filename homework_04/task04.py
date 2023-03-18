@@ -22,8 +22,9 @@ class ATM:
             print(self._GREETING)
 
         def print_menu(self):
-            print("Main menu:")
+            print("\nMAIN MENU:")
             print('\n'.join([f'{i:10}{label:>30}' for i, label in enumerate(self._menu, start=1)]))
+            print()
 
         @staticmethod
         def print_text(text) -> None:
@@ -77,14 +78,17 @@ class ATM:
         return self._account_sum
 
     def get_operations_list(self) -> str:
-        return '\n'.join(''.join([f'{item[0]:.<30} {item[1]:>20}' for item in self._operations_list]))
+        return '\n' + '\n'.join(
+            [f'{item[0]:.<30} {(item[1]):<20.2f}'
+             for item in self._operations_list
+             ]) + '\n'
 
     def put(self) -> None:
         self.display.print_text('Input amount of money to put: ')
         sum_to_put = self.display.get_amount()
         self._account_sum += sum_to_put
         self._operation_count += 1
-        self._operations_list.append(("Income:", sum_to_put))
+        self._operations_list.append(("Income:", Decimal(sum_to_put)))
         if self._account_sum > self.CEILING_SUM:
             tax_sum = self._account_sum * self.TAX_WEALTH
             self._account_sum -= tax_sum
@@ -142,7 +146,7 @@ class ATM:
                 case 'CHECK':
                     self.check()
                 case 'GET OPERATIONS HISTORY':
-                    self.get_operations_list()
+                    self.display.print_text(self.get_operations_list())
                 case 'EXIT':
                     self.display.print_text("Good-bye! Exiting...")
                     raise SystemExit(0)
