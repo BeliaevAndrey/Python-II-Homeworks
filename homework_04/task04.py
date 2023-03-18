@@ -3,6 +3,7 @@
 # Дополнительно сохраняйте все операции поступления и
 # снятия средств в список.
 from decimal import Decimal
+from decimal import InvalidOperation
 
 
 class ATM:
@@ -51,13 +52,14 @@ class ATM:
             while True:
                 try:
                     money_amt = Decimal(input("Input amount of money: "))
-                except TypeError:
+                except (TypeError, InvalidOperation):
                     print("Wrong input")
-                if not money_amt % 50:
-                    print(f'You entered:{round(money_amt, 2):.30}')
-                    return money_amt
                 else:
-                    print('Amount is not multiple of 50.00 units')
+                    if not money_amt % 50:
+                        print(f'You entered:{round(money_amt, 2):.30}')
+                        return money_amt
+                    else:
+                        print('Amount is not multiple of 50.00 units')
 
     _ACTIONS: tuple = ('TAKE', 'PUT', 'CHECK', 'GET OPERATIONS HISTORY', 'EXIT')
     _account_sum: Decimal = 0
@@ -128,12 +130,14 @@ class ATM:
 
     def check(self) -> None:
         self.display.print_text('Rest money on account:')
-        self.display.print_text(self.get_money_rest())
+        self.display.print_text(f'{self.get_money_rest():.2f}')
 
     def check_operation(self) -> None:
+        if self._account_sum > self.CEILING_SUM:
+            tax_sum = self._account_sum * self.TAX_WEALTH
+            self._account_sum -= tax_sum
+            self._operations_list.append(('WEALTH TAX: ', -tax_sum))
         self.check()
-        if self.TAX_LOWER_LIM < self._account_sum < self.TAX_UPPER_LIM:
-            self._account_sum -= self._account_sum * self.TAX_STANDARD
 
     def work(self) -> None:
         while True:
