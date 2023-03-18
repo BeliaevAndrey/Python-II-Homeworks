@@ -2,9 +2,6 @@
 # Разбейте её на отдельные операции — функции.
 # Дополнительно сохраняйте все операции поступления и
 # снятия средств в список.
-
-
-
 from decimal import Decimal
 
 
@@ -28,7 +25,8 @@ class ATM:
             print("Main menu:")
             print('\n'.join([f'{i:10}{label:>30}' for i, label in enumerate(self._menu, start=1)]))
 
-        def print_text(self, text) -> None:
+        @staticmethod
+        def print_text(text) -> None:
             print(text)
 
         def choose(self) -> str:
@@ -46,7 +44,8 @@ class ATM:
                 else:
                     print("Wrong input")
 
-        def get_amount(self) -> Decimal:
+        @staticmethod
+        def get_amount() -> Decimal:
             money_amt = -1
             while True:
                 try:
@@ -59,7 +58,7 @@ class ATM:
                 else:
                     print('Amount is not multiple of 50.00 units')
 
-    _ACTIONS: tuple = ('TAKE', 'PUT', 'CHECK', 'EXIT')
+    _ACTIONS: tuple = ('TAKE', 'PUT', 'CHECK', 'GET OPERATIONS HISTORY', 'EXIT')
     _account_sum: Decimal = 0
     TAX_STANDARD: Decimal = Decimal(0.015)
     REFINANCE_RATE: Decimal = Decimal(0.03)
@@ -70,23 +69,30 @@ class ATM:
     DIVISOR: Decimal = Decimal(50)
 
     def __init__(self) -> None:
-        self.operation_count = 0
+        self._operation_count = 0
         self.display = self.Display(self._ACTIONS)
-        # self.work()
+        self._operations_list: list = []
 
     def get_money_rest(self) -> Decimal:
         return self._account_sum
+
+    def get_operations_list(self) -> str:
+        return '\n'.join(''.join([f'{item[0]:.<30} {item[1]:>20}' for item in self._operations_list]))
 
     def put(self) -> None:
         self.display.print_text('Input amount of money to put: ')
         sum_to_put = self.display.get_amount()
         self._account_sum += sum_to_put
-        self.operation_count += 1
-        if self.TAX_LOWER_LIM < self._account_sum < self.TAX_UPPER_LIM:
-            self._account_sum -= self._account_sum * self.TAX_STANDARD
-        if self.operation_count > 3:
-            self._account_sum += self._account_sum * self.REFINANCE_RATE
-            self.operation_count = 0
+        self._operation_count += 1
+        self._operations_list.append(("Income:", sum_to_put))
+        if self._account_sum > self.CEILING_SUM:
+            tax_sum = self._account_sum * self.TAX_WEALTH
+            self._account_sum -= tax_sum
+            self._operations_list.append(('WEALTH TAX: ', -tax_sum))
+        if self._operation_count > 3:
+            refinance = self._account_sum * self.REFINANCE_RATE
+            self._account_sum += refinance
+            self._operations_list.append(("Income:", refinance))
         self.check()
 
     def take(self) -> None:
@@ -96,12 +102,24 @@ class ATM:
             self.display.print_text('Not enough money!')
         else:
             self._account_sum -= sum_to_take
-            self.operation_count += 1
-            if self.TAX_LOWER_LIM < self._account_sum < self.TAX_UPPER_LIM:
-                self._account_sum -= self._account_sum * self.TAX_STANDARD
-            if self.operation_count > 3:
-                self._account_sum += self._account_sum * self.REFINANCE_RATE
-                self.operation_count = 0
+            self._operation_count += 1
+            self._operations_list.append(("Outcome:", -sum_to_take))
+            tax_standard = sum_to_take * self.TAX_STANDARD
+            if tax_standard > 600:
+                tax_standard = 600
+            elif tax_standard < 30:
+                tax_standard = 30
+            self._account_sum -= tax_standard
+            self._operations_list.append(('TAX FOR TAKING: ', -tax_standard))
+            if self._account_sum > self.CEILING_SUM:
+                tax_sum = self._account_sum * self.TAX_WEALTH
+                self._account_sum -= tax_sum
+                self._operations_list.append(('WEALTH TAX: ', -tax_sum))
+            if self._operation_count > 3:
+                refinance = self._account_sum * self.REFINANCE_RATE
+                self._account_sum += refinance
+                self._operations_list.append(("Income:", refinance))
+                self._operation_count = 0
         self.check()
 
     def check(self) -> None:
@@ -123,6 +141,8 @@ class ATM:
                     self.put()
                 case 'CHECK':
                     self.check()
+                case 'GET OPERATIONS HISTORY':
+                    self.get_operations_list()
                 case 'EXIT':
                     self.display.print_text("Good-bye! Exiting...")
                     raise SystemExit(0)
