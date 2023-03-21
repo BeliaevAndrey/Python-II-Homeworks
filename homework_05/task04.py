@@ -6,7 +6,7 @@ def fibonacci_gen(limit_pos: int):
 
 
 def main():
-    print(*fibonacci_gen(11))
+    print(*fibonacci_gen(50))
 
 
 if __name__ == '__main__':
