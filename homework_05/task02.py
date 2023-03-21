@@ -1,9 +1,8 @@
 # Напишите функцию, которая принимает на вход строку - абсолютный путь до файла.
 # Функция возвращает кортеж из трёх элементов: путь, имя файла, расширение файла.
 
-def function(some_path: str) -> tuple[str, str, str]:
-    path, name, ext = *some_path.rsplit('.', 1)[0].rsplit('/', 1), some_path.rsplit('.', 1)[1]
-    return path, name, ext
+def function(some_path: str) -> tuple:
+    return *some_path.rsplit('.', 1)[0].rsplit('/', 1), some_path.rsplit('.', 1)[1]
 
 
 def main():
