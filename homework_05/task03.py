@@ -21,7 +21,7 @@ def main() -> None:
     name_lst: list[str] = ['First', 'Second', 'Third']
     salary_lst: list[int] = [120_000, 100_000, 140_000]
     award_lst: list[str] = ['10.25%', '7.75%', '8.95%']
-    print('\n'.join(f'{item[0]:.<10}{item[1]:.>15.2f}'.replace(',', ' ')
+    print('\n'.join(f'{item[0]:.<10}{item[1]:.>15.2f}'
                     for item in gen_dic(name_lst, salary_lst, award_lst).items()))
 
 
