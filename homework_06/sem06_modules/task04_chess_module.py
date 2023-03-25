@@ -88,6 +88,7 @@ class ChessBoard:
 
 
 class Searcher:
+    """Searching wining combinations of queen placement"""
     _winning_strings: set[str] = None
     _win_boards: dict[str, ChessBoard] = None
     _current_board: ChessBoard = None
@@ -101,6 +102,7 @@ class Searcher:
         self._current_board = ChessBoard()
 
     def brute_force(self):
+        """Search of winning combination based on permutations function from itertools module"""
         moves_pack = list()
         for line in permutations('abcdefgh'):
             moves_pack.append(tuple(''.join(pair) for pair in zip(line, '12345678')))
@@ -124,6 +126,7 @@ class Searcher:
 
 
 class RandomSearcher:
+    """Searching wining combinations of queen placement"""
     _winning_strings: set[str] = None
     _win_boards: dict[str, ChessBoard] = None
     _current_board: ChessBoard = None
@@ -140,6 +143,7 @@ class RandomSearcher:
         self._current_board = ChessBoard()
 
     def start(self):
+        """Search of winning combination based on random combinations of moves"""
         count = 0
         while len(self._winning_strings) < 4 and count < self._STOP_NUM:
             count += 1
@@ -147,7 +151,6 @@ class RandomSearcher:
             letters = list('abcdefgh')
             _sfl(letters)
             string = ','.join(f'{i+1}{letters[i]}' for i in range(8))
-            inner_count = 0
             while string not in self._used_combs:
                 letters = list('abcdefgh')
                 _sfl(letters)
