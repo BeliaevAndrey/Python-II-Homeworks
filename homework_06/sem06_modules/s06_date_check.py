@@ -2,7 +2,7 @@ __all__ = ['checker']
 
 from datetime import date
 from sys import argv
-import re
+# import re
 
 _LEAP_DIVISOR = 4
 _EXCLUDE = 100
@@ -38,13 +38,14 @@ def checker(date_in: str) -> bool:
 
 
 if __name__ == '__main__':
-    pattern = re.compile("\\d{1,2}\\.\\d{1,2}\\.\\d{4}")
-    if not argv:
-        print("Date not found")
-    else:
-        for item in argv[1:]:
-            if pattern.match(item):
-                print("Date is ok" if checker(item) else "Date is NOT ok")
-                break
-        else:
-            print("Date not found")
+    print("Not for separate use")
+    # pattern = re.compile("\\d{1,2}\\.\\d{1,2}\\.\\d{4}")
+    # if not argv:
+    #     print("Date not found")
+    # else:
+    #     for item in argv[1:]:
+    #         if pattern.match(item):
+    #             print("The date is right indeed" if checker(item) else "The date is NOT right indeed")
+    #             break
+    #     else:
+    #         print("Date not found")
