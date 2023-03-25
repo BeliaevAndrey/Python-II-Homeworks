@@ -1,8 +1,9 @@
 """Modification of chess module for task 3 """
-__all__ = ['ChessBoard', 'Searcher']
+__all__ = ['ChessBoard', 'Searcher', 'RandomSearcher']
 
 from itertools import permutations
-from random import randint as r_int
+from random import shuffle as _sfl
+from math import factorial as _fct
 
 
 class ChessBoard:
@@ -99,7 +100,7 @@ class Searcher:
     def new_board(self) -> None:
         self._current_board = ChessBoard()
 
-    def start(self):
+    def brute_force(self):
         moves_pack = list()
         for line in permutations('abcdefgh'):
             moves_pack.append(tuple(''.join(pair) for pair in zip(line, '12345678')))
@@ -114,6 +115,48 @@ class Searcher:
                 self.new_board()
                 if len(self._winning_strings) > 3:
                     break
+
+    def get_winning_strings(self) -> set[str]:
+        return self._winning_strings
+
+    def get_winning_boards(self) -> dict[str, ChessBoard]:
+        return self._win_boards
+
+
+class RandomSearcher:
+    _winning_strings: set[str] = None
+    _win_boards: dict[str, ChessBoard] = None
+    _current_board: ChessBoard = None
+    _used_combs = set()
+    _LETTERS = list('abcdefgh')
+    _STOP_NUM = _fct(len(_LETTERS))
+
+    def __init__(self):
+        self._winning_strings = set()
+        self._win_boards = {}
+        self._new_board()
+
+    def _new_board(self) -> None:
+        self._current_board = ChessBoard()
+
+    def start(self):
+        count = 0
+        while len(self._winning_strings) < 4 and count < self._STOP_NUM:
+            count += 1
+            self._new_board()
+            letters = list('abcdefgh')
+            _sfl(letters)
+            string = ','.join(f'{i+1}{letters[i]}' for i in range(8))
+            inner_count = 0
+            while string not in self._used_combs:
+                letters = list('abcdefgh')
+                _sfl(letters)
+                string = ','.join(f'{i+1}{letters[i]}' for i in range(8))
+                self._used_combs.add(string)
+            self._current_board.set_placement(string)
+            if self._current_board.check_win():
+                self._winning_strings.add(string)
+                self._win_boards[string] = self._current_board
 
     def get_winning_strings(self) -> set[str]:
         return self._winning_strings
