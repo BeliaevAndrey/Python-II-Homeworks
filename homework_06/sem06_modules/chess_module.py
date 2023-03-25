@@ -13,43 +13,54 @@ class ChessBoard:
         self._board = [[0] * self._SIDE for _ in range(self._SIDE)]
         self._counter = 0
         self._beaten = set()
-        print(f'INITED {self._beaten} {self._counter}')
 
-    def place(self, coords: str, queen_num: int) -> None:
+    def set_placement(self, placement: str) -> bool:
+        """
+        Obtain figures disposition
+        :param placement: str -- string formatted as: "xN,xN,xN,xN,xN,xN,xN" x = a...h, N = 1...8
+        :return: bool
+        """
+        placement.replace(' ', '')
+        for qn, place in enumerate(placement.split(','), start=1):
+            self.place_figure(coords=place, queen_num=qn)
+        return self.check_win()
+
+    def place_figure(self, coords: str, queen_num: int) -> None:
+        """
+        Places figure to the certain field of board
+        :param coords: str -- coordinate string formatted as: "xN"
+        :param queen_num: int -- number of queen
+        :return: None
+        """
         if len(coords) != 2:
-            # print('Wrong coordinates.')
             return
         col, row = list(coords)
         col, row = self._COLS.find(col), self._ROWS.find(row)
         if row == -1 or col == -1:
-            # print(f'{queen_num}, Position out of board.')
             return
         if (row, col) in self._beaten:
-            # print(f'{queen_num}, Position is beaten by another queen')
             return
         elif not self._check(row, col):
-            # print(f'{queen_num}, Position occupied')
             return
         else:
             self._board[row][col] = queen_num
-            # self._check_moves(row, col, queen_num)
             self._check_moves(row, col)
             self._counter += 1
 
     def _check(self, row: int, col: int) -> bool:
+        """Checks if a field is free"""
         if self._board[row][col] != 0:
             return False
         return True
 
-    # def _check_moves(self, row: int, col: int, queen_num: int) -> None:
     def _check_moves(self, row: int, col: int) -> None:
+        """Updating set of fields beaten by a queen placed"""
         for j in range(self._SIDE):
             for i in range(self._SIDE):
                 if (j == row and i == col
                         or j - i == row - col
                         or j + i == row + col
                         or j == row or i == col):
-                    # self._board[j][i] = -queen_num
                     self._beaten.add((j, i))
 
     def __str__(self) -> str:
@@ -61,9 +72,11 @@ class ChessBoard:
         return out_str + '\n'
 
     def get_beaten(self) -> set:
+        """Get a bitten fields totals"""
         return self._beaten
 
     def check_win(self) -> bool:
+        """Returns True if all 8 queens stand secure"""
         if self._counter == 8:
             return True
         return False
@@ -71,12 +84,17 @@ class ChessBoard:
 
 if __name__ == '__main__':
     chess_board = ChessBoard()
+    print(chess_board.set_placement("a1,b7,c5,d8,e2,f4,g6,h3,"))
+    print(chess_board.get_beaten())
     print(chess_board)
-    chess_board.place('b1', 1)
-    chess_board.place('c3', 2)
-    chess_board.place('e2', 3)
-    chess_board.place('h4', 4)
-    chess_board.place('f5', 5)
+
+    chess_board = ChessBoard()
+    print(chess_board.set_placement("d8,a1,c5,e2,f4,g6,h3,b7"))
+    print(chess_board.get_beaten())
     print(chess_board)
-    print(len(chess_board.get_beaten()), chess_board.get_beaten())
+
+    chess_board = ChessBoard()
+    print(chess_board.set_placement("d8,a3,c5,e2,f4,g6,h3,b7"))
+    print(chess_board.get_beaten())
+    print(chess_board)
 
