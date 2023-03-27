@@ -115,7 +115,7 @@ class Searcher:
                 self._winning_strings.add(','.join(sorted(bunch)))
                 self._win_boards[','.join(sorted(bunch))] = self._current_board
                 self.new_board()
-                if len(self._winning_strings) > 3:
+                if len(self._winning_strings) > 100:
                     break
 
     def get_winning_strings(self) -> set[str]:
@@ -145,7 +145,7 @@ class RandomSearcher:
     def start(self):
         """Search of winning combination based on random combinations of moves"""
         count = 0
-        while len(self._winning_strings) < 4 and count < self._STOP_NUM:
+        while len(self._winning_strings) < 92 and count < self._STOP_NUM * 10:
             count += 1
             self._new_board()
             letters = list('abcdefgh')
@@ -154,18 +154,22 @@ class RandomSearcher:
             while string not in self._used_combs:
                 letters = list('abcdefgh')
                 _sfl(letters)
-                string = ','.join(f'{i+1}{letters[i]}' for i in range(8))
+                string = ','.join(sorted([f'{letters[i]}{i+1}' for i in range(8)]))
                 self._used_combs.add(string)
             self._current_board.set_placement(string)
             if self._current_board.check_win():
                 self._winning_strings.add(string)
                 self._win_boards[string] = self._current_board
+        # print('COUNT: ', count)
 
     def get_winning_strings(self) -> set[str]:
         return self._winning_strings
 
     def get_winning_boards(self) -> dict[str, ChessBoard]:
         return self._win_boards
+
+    def get_used(self) -> set[str]:
+        return self._used_combs
 
 
 if __name__ == '__main__':
