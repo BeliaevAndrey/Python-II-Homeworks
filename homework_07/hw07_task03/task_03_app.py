@@ -9,7 +9,7 @@ class Display:
     _HR: str = '=' * 80
     _PROMPT: str = '_> '
 
-    def __init__(self, menu: tuple[str]):
+    def __init__(self, menu: tuple[str]) -> None:
         self._menu = menu
 
     def display_menu(self) -> None:
@@ -18,7 +18,7 @@ class Display:
                                    for point, sign in enumerate(self._menu)]))
 
     @staticmethod
-    def display_text(text):
+    def display_text(text) -> None:
         print(text)
 
     def obtain_pointer(self) -> str:
@@ -39,7 +39,9 @@ class Display:
         else:
             return -1
 
-    def read_string(self, prompt: str, limitations: tuple = None, empty_allowed: bool = False):
+    def read_string(self, prompt: str,
+                    limitations: tuple = None,
+                    empty_allowed: bool = False) -> str:
         while True:
             result = input(prompt + self._PROMPT)
             if limitations is None and result:
@@ -72,11 +74,11 @@ class Controller:
             if stopper in ('y', 'Y'):
                 return out_dict
 
-    def _print_work_dir(self):
+    def _print_work_dir(self) -> None:
         self.display.display_text('CURRENT WORKING DIRECTORY:')
         self.display.display_text(self._working_directory)
 
-    def mad_file_creator(self, ) -> None:
+    def mad_file_creator(self) -> None:
         extensions_pack = self._collect_extensions()
         pack_string = f'{"extensions":^20}{"amount of files:":^20}\n{"-" * 40:^40}\n'
         pack_string += '\n'.join([f'{ext:^20}{amt:^20}' for ext, amt in extensions_pack.items()]) + '\n'
@@ -134,7 +136,7 @@ class Controller:
         out_dict['dst_file_name'] = self.display.read_string('Enter new filename (if needed)', empty_allowed=True)
         return out_dict
 
-    def start_group_rename(self):
+    def start_group_rename(self) -> None:
         files_to_rename_dct = self._collect_data_on_renaming()
         info_string = '\n'.join([f'{i_key:20}{i_val}' for i_key, i_val in files_to_rename_dct.items()])
         self.display.display_text('Rename parameters:' + '\n')
@@ -147,7 +149,7 @@ class Controller:
         else:
             return
 
-    def work(self):
+    def work(self) -> None:
         flag = True
         while flag:
             self.display.display_menu()
