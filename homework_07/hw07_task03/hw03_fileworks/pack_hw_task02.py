@@ -10,6 +10,8 @@
 #       К ним прибавляетсяжелаемое конечное имя, если оно передано. Далее счётчик файлов и расширение.
 import os
 
+__all__ = ['grp_rename']
+
 
 def grp_rename(number_digits_amt: int,
                src_extension: str,
@@ -28,30 +30,13 @@ def grp_rename(number_digits_amt: int,
                 number = f'{counter:0>{number_digits_amt}}'
                 new_name = curr_file[0].replace('.', '')[origin_range[0]: origin_range[1]]
                 new_name = f'{new_name}{dst_file_name}{number}.{dst_extension}'
-                os.replace(file, new_name)
                 files_processed.append((file, new_name))
+                os.replace(file, new_name)
     return files_processed
 
 
-def main():
-    os.chdir('/homework_07/out_dir_task02')
-    result = grp_rename(number_digits_amt=4,
-                        src_extension='txt',
-                        origin_range=(3, 6),
-                        dst_extension='aaatxt',
-                        )
-    print(''.join([f'File: {item[0]} moved to: {item[1]}\n' for item in result]))
-
-    result = grp_rename(number_digits_amt=4,
-                        src_extension='ext1',
-                        origin_range=(6, 16),
-                        dst_extension='ext001',
-                        )
-    print(''.join([f'File: {item[0]} moved to: {item[1]}\n' for item in result]))
-
-
 if __name__ == '__main__':
-    main()
+    print("Not for separate use.")
 
 #     extensions       amount of files:
 #        ext1                 5
