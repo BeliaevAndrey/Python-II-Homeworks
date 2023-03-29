@@ -1,4 +1,6 @@
 import re
+import os
+import shutil
 from hw03_fileworks import creator_m
 
 
@@ -9,13 +11,11 @@ class Display:
 
     def __init__(self, menu: tuple[str]):
         self._menu = menu
-        self.display_menu()
 
     def display_menu(self) -> None:
         self.display_text(self._HR)
-        self.display_text(''.join([f'{point + 1:5}{sign}\n'
+        self.display_text(''.join([f'{point + 1:<5}{sign}\n'
                                    for point, sign in enumerate(self._menu)]))
-        self.obtain_pointer()
 
     @staticmethod
     def display_text(text):
@@ -44,7 +44,7 @@ class Display:
         while True:
             if limitations is None and result:
                 return result
-            elif result in limitations:
+            elif limitations and result in limitations:
                 result = input(prompt + self._PROMPT)
                 return result
             else:
@@ -52,10 +52,14 @@ class Display:
 
 
 class Controller:
-    _ACTIONS: tuple[str] = ('CREATE FILES', 'GROUP RENAME', 'EXIT',)
+    _ACTIONS: tuple[str] = ('CHOOSE WORKING DIRECTORY', 'CREATE FILES', 'GROUP RENAME', 'EXIT',)
+    _working_directory: str = None
+    _SPECIALS = r"~`!@#$%^&*()\"<>' "
 
     def __init__(self) -> None:
         self.display = Display(self._ACTIONS)
+        self._working_directory = os.getcwd()
+        self._print_work_dir()
 
     def _collect_extensions(self) -> dict[str, int]:
         out_dict = {}
@@ -66,6 +70,10 @@ class Controller:
             out_dict[ext] = amt
             if stopper in ('y', 'Y'):
                 return out_dict
+
+    def _print_work_dir(self):
+        self.display.display_text('CURRENT WORKING DIRECTORY:')
+        self.display.display_text(self._working_directory)
 
     def mad_file_creator(self,) -> None:
         extensions_pack = self._collect_extensions()
@@ -78,18 +86,51 @@ class Controller:
         else:
             return
 
+    def _validate_path(self, path: str) -> bool:
+        print(f'VALIDATING:  {path}')     # TODO: rms
+        if path == '':
+            return False
+        for smb in path:
+            if smb in self._SPECIALS:
+                print(f'Wrong symbol: {smb}')   # TODO: rms
+                return False
+        return True
+
+    def change_work_dir(self):
+        self._print_work_dir()
+        new_path = ''
+        while not self._validate_path(new_path):
+            new_path = self.display.read_string('Enter new ABSOLUTE path')
+            if '\\' in new_path:
+                new_path = os.path.join(*new_path.split('\\'))
+
+        if os.path.isdir(new_path):
+            self.display.display_text("Changing to new directory")
+            self._working_directory = new_path
+        else:
+            self.display.display_text("Creating new directory")
+            os.makedirs(new_path)
+            self._working_directory = new_path
+        os.chdir(self._working_directory)
+        print(os.getcwd())      # FIXME: RMS
+        self._print_work_dir()
+
     def work(self):
         flag = True
         while flag:
-            match self.display.obtain_pointer():
+            self.display.display_menu()
+            choice = self.display.obtain_pointer()
+            print('CHOOSE:', choice)
+            match choice:
                 case 'EXIT':
                     flag = False
                     print('Exiting... Bye!')
-
                 case 'CREATE FILES':
-                    ...
+                    self.mad_file_creator()
                 case 'GROUP RENAME':
                     ...
+                case 'CHOOSE WORKING DIRECTORY':
+                    self.change_work_dir()
                 case _:
                     print("Internal Error")
 
