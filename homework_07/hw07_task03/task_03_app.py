@@ -1,6 +1,5 @@
 import re
 import os
-import shutil
 from hw03_fileworks import creator_m, grp_rename
 
 
