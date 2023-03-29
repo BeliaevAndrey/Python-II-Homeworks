@@ -52,9 +52,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-#     extensions       amount of files:
-#        ext1                 5
-#        ext2                 4
-#        txt                  10
-#       other                 5
