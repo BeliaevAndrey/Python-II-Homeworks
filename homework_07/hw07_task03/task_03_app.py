@@ -115,6 +115,9 @@ class Controller:
         print(os.getcwd())      # FIXME: RMS
         self._print_work_dir()
 
+    def start_group_rename(self):
+        self.display.display_text("STILL A STUB")
+
     def work(self):
         flag = True
         while flag:
@@ -128,7 +131,7 @@ class Controller:
                 case 'CREATE FILES':
                     self.mad_file_creator()
                 case 'GROUP RENAME':
-                    ...
+                    self.start_group_rename()
                 case 'CHOOSE WORKING DIRECTORY':
                     self.change_work_dir()
                 case _:

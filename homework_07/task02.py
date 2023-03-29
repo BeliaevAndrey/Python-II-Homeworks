@@ -31,8 +31,24 @@ def grp_rename(number_digits_amt: int,
 
 
 def main():
-    ...
+    os.chdir('/homework_07/out_dir_1')
+    grp_rename(number_digits_amt=4,
+               src_extension='txt',
+               origin_range=(3, 6),
+               dst_extension='aaatxt',
+               )
+    grp_rename(number_digits_amt=4,
+               src_extension='ext1',
+               origin_range=(6, 16),
+               dst_extension='ext001',
+               )
 
 
 if __name__ == '__main__':
     main()
+
+#     extensions       amount of files:
+#        ext1                 5
+#        ext2                 4
+#        txt                  10
+#       other                 5
