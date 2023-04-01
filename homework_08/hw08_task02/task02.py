@@ -12,7 +12,7 @@ from pack_task02 import (csv_reader, csv_writer,
 def list_files(start_path: str,
                file_ext: str, ) -> list[str]:
     if 'pickle' in file_ext:
-        file_ext = file_ext.replace('pickle', '.bin')
+        file_ext = file_ext.replace('pickle', 'bin')
     if '.' not in file_ext:
         file_ext = '.' + file_ext
     result_lst = [file_ext]
