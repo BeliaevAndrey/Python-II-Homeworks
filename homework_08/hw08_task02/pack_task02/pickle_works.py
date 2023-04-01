@@ -17,7 +17,7 @@ def pickle_writer(in_dct: dict,
         pickle.dump(in_dct, f_out)
 
 
-def reader(file_in_path: str) -> list[dict[str]]:
+def pickle_reader(file_in_path: str) -> list[dict[str]]:
     """
     Reads binary file to a list of dictionaries
     :param file_in_path: str -- path to a file to be read

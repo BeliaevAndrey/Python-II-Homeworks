@@ -17,7 +17,7 @@ def json_writer(in_dct: dict,
         json.dump(in_dct, f_out, indent=4)
 
 
-def json_read(file_path: str) -> dict[str]:
+def json_reader(file_path: str) -> dict[str]:
     """
     Reads json file to a dictionary
     :param file_path: str -- path to a file to be read
