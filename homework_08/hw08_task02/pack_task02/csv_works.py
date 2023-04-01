@@ -1,8 +1,9 @@
 import csv
 import os
+from datetime import datetime as dt
 
 
-def csv_writer(in_dct: dict,
+def csv_writer(in_dct: [list[dict], dict],
                path: str,
                file_name: str) -> None:
     """
@@ -13,12 +14,30 @@ def csv_writer(in_dct: dict,
     :return: None
     """
     file_path = os.path.join(path, file_name + '.csv')
-    data = []
-    for i_key, i_val in in_dct.items():
-        data.append([i_key, *i_val.values()])
+    if os.path.exists(file_path):
+        file_name += '_copy_' + str(dt.now()).replace(' ', '_').replace(':', '-').split('.')[0]
+        file_path = os.path.join(path, file_name + '.csv')
+
+    if isinstance(in_dct, list):
+        data = _form_lst(in_dct)
+    else:
+        data = []
+        for i_key, i_val in in_dct.items():
+            if isinstance(i_val, dict):
+                for j_key, j_val in i_val.items():
+                    data.append([i_key, j_key, j_val])
+            else:
+                data.append([i_key, i_val])
     with open(file_path, 'w', encoding='utf-8') as f_out:
         write_csv = csv.writer(f_out, dialect='excel', delimiter=';')
         write_csv.writerows(data)
+
+
+def _form_lst(data_lst: list[dict]) -> list[list[str]]:
+    out_lst = [[i_key for i_key in data_lst[0].keys()]]
+    for dct in data_lst:
+        out_lst.append([*dct.values()])
+    return out_lst
 
 
 def csv_reader(file_path: str) -> list[dict[str]]:
@@ -32,7 +51,7 @@ def csv_reader(file_path: str) -> list[dict[str]]:
         read_csv = csv.DictReader(f_in, dialect='excel', delimiter=';')
         keys = (next(read_csv))
         for row in read_csv:
-            out_dict_list.append(*zip(keys, row))
+            out_dict_list.append({key: item for key, item in zip(keys, row)})
     return out_dict_list
 
 

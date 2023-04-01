@@ -1,6 +1,6 @@
-from csv_works import *
-from json_works import *
-from pickle_works import *
+from .csv_works import *
+from .json_works import *
+from .pickle_works import *
 
 __all__ = [
     'csv_reader',

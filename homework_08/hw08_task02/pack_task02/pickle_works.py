@@ -1,8 +1,9 @@
 import pickle
 import os
+from datetime import datetime as dt
 
 
-def pickle_writer(in_dct: dict,
+def pickle_writer(in_dct: [list[dict], dict],
                   path: str,
                   file_name: str) -> None:
     """
@@ -13,6 +14,10 @@ def pickle_writer(in_dct: dict,
     :return: None
     """
     file_path = os.path.join(path, file_name + '.bin')
+    if os.path.exists(file_path):
+        file_name += '_copy_' + str(dt.now()).replace(' ', '_').replace(':', '-').split('.')[0]
+        file_path = os.path.join(path, file_name + '.bin')
+
     with open(file_path, 'wb') as f_out:
         pickle.dump(in_dct, f_out)
 
