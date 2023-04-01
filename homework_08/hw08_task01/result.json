@@ -1,0 +1,1262 @@
+{
+    "/home/andrew/Documents/geekbrains/Python2023": {
+        "unit_type": "Directory",
+        "unit_name": "Homeworks",
+        "unit_size": 3310886,
+        "parent_dir": "Python2023"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/": {
+        "unit_type": "Directory",
+        "unit_name": "homework_08",
+        "unit_size": 212524,
+        "parent_dir": "Homeworks"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/homework_02": {
+        "unit_type": "File",
+        "unit_name": "task02.py",
+        "unit_size": 1138,
+        "parent_dir": "homework_02"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/homework_04": {
+        "unit_type": "File",
+        "unit_name": "task02.py",
+        "unit_size": 1755,
+        "parent_dir": "homework_04"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/homework_06": {
+        "unit_type": "File",
+        "unit_name": "task02.py",
+        "unit_size": 554,
+        "parent_dir": "homework_06"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/homework_06/sem06_modules": {
+        "unit_type": "File",
+        "unit_name": "task04_chess_module.py",
+        "unit_size": 5980,
+        "parent_dir": "sem06_modules"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/homework_06/sem06_modules/__pycache__": {
+        "unit_type": "File",
+        "unit_name": "chess_module.cpython-311.pyc",
+        "unit_size": 6861,
+        "parent_dir": "__pycache__"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/homework_07": {
+        "unit_type": "File",
+        "unit_name": "task02.py",
+        "unit_size": 2804,
+        "parent_dir": "homework_07"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/homework_07/out_dir_task02": {
+        "unit_type": "File",
+        "unit_name": "k0001.ext001",
+        "unit_size": 1226,
+        "parent_dir": "out_dir_task02"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/homework_07/hw07_task03": {
+        "unit_type": "File",
+        "unit_name": "task_03_app.py",
+        "unit_size": 6703,
+        "parent_dir": "hw07_task03"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/homework_07/hw07_task03/out_dir_task03": {
+        "unit_type": "Directory",
+        "unit_name": "inner_dir",
+        "unit_size": 22134,
+        "parent_dir": "out_dir_task03"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/homework_07/hw07_task03/out_dir_task03/inner_dir": {
+        "unit_type": "File",
+        "unit_name": "skdsceckgdhugvnwyzv.txt2",
+        "unit_size": 2968,
+        "parent_dir": "inner_dir"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/homework_07/hw07_task03/hw03_fileworks": {
+        "unit_type": "File",
+        "unit_name": "pack_task04.py",
+        "unit_size": 2241,
+        "parent_dir": "hw03_fileworks"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/homework_07/hw07_task03/hw03_fileworks/__pycache__": {
+        "unit_type": "File",
+        "unit_name": "pack_task05.cpython-311.pyc",
+        "unit_size": 2522,
+        "parent_dir": "__pycache__"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.idea": {
+        "unit_type": "File",
+        "unit_name": "modules.xml",
+        "unit_size": 270,
+        "parent_dir": ".idea"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.idea/inspectionProfiles": {
+        "unit_type": "File",
+        "unit_name": "profiles_settings.xml",
+        "unit_size": 228,
+        "parent_dir": "inspectionProfiles"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/homework_01": {
+        "unit_type": "File",
+        "unit_name": "task02.py",
+        "unit_size": 1846,
+        "parent_dir": "homework_01"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/homework_05": {
+        "unit_type": "File",
+        "unit_name": "task02.py",
+        "unit_size": 657,
+        "parent_dir": "homework_05"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git": {
+        "unit_type": "Directory",
+        "unit_name": "info",
+        "unit_size": 240,
+        "parent_dir": ".git"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/logs": {
+        "unit_type": "File",
+        "unit_name": "HEAD",
+        "unit_size": 10454,
+        "parent_dir": "logs"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/logs/refs": {
+        "unit_type": "Directory",
+        "unit_name": "heads",
+        "unit_size": 10454,
+        "parent_dir": "refs"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/logs/refs/remotes": {
+        "unit_type": "Directory",
+        "unit_name": "origin",
+        "unit_size": 8929,
+        "parent_dir": "remotes"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/logs/refs/remotes/origin": {
+        "unit_type": "File",
+        "unit_name": "master",
+        "unit_size": 8929,
+        "parent_dir": "origin"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/logs/refs/heads": {
+        "unit_type": "File",
+        "unit_name": "master",
+        "unit_size": 10454,
+        "parent_dir": "heads"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/refs": {
+        "unit_type": "Directory",
+        "unit_name": "heads",
+        "unit_size": 41,
+        "parent_dir": "refs"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/refs/remotes": {
+        "unit_type": "Directory",
+        "unit_name": "origin",
+        "unit_size": 41,
+        "parent_dir": "remotes"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/refs/remotes/origin": {
+        "unit_type": "File",
+        "unit_name": "master",
+        "unit_size": 41,
+        "parent_dir": "origin"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/refs/heads": {
+        "unit_type": "File",
+        "unit_name": "master",
+        "unit_size": 41,
+        "parent_dir": "heads"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects": {
+        "unit_type": "Directory",
+        "unit_name": "4a",
+        "unit_size": 179,
+        "parent_dir": "objects"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/34": {
+        "unit_type": "File",
+        "unit_name": "5c1b5af32fd3f63fb72077c9926dc4c6a25da6",
+        "unit_size": 1571,
+        "parent_dir": "34"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/b6": {
+        "unit_type": "File",
+        "unit_name": "1b960c87a9940b9b606fd2858b508a664f8d77",
+        "unit_size": 200,
+        "parent_dir": "b6"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/e5": {
+        "unit_type": "File",
+        "unit_name": "d56f3b1aa596dbcd9d11d20ed7412575c18f11",
+        "unit_size": 99,
+        "parent_dir": "e5"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/d8": {
+        "unit_type": "File",
+        "unit_name": "c33e90b36c43cd76fc2b5451fd9eeda727f498",
+        "unit_size": 294,
+        "parent_dir": "d8"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/97": {
+        "unit_type": "File",
+        "unit_name": "cd71c24cde0d9e39ad99dddfd37af18c767929",
+        "unit_size": 92,
+        "parent_dir": "97"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/43": {
+        "unit_type": "File",
+        "unit_name": "b9000d43eaef33fb96f1eefb31b6bc3279d505",
+        "unit_size": 716,
+        "parent_dir": "43"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/bc": {
+        "unit_type": "File",
+        "unit_name": "d74e3f37fb4d5ca656fc6ccb85bd5658783d89",
+        "unit_size": 194,
+        "parent_dir": "bc"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/5f": {
+        "unit_type": "File",
+        "unit_name": "b38180afdeb44e82b7e42935b6faf4b427f53e",
+        "unit_size": 711,
+        "parent_dir": "5f"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/7e": {
+        "unit_type": "File",
+        "unit_name": "039a8a793d00a7f311cbcb29c100d1abaf4910",
+        "unit_size": 1807,
+        "parent_dir": "7e"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/9b": {
+        "unit_type": "File",
+        "unit_name": "cf10e72ac56fc304dc3e5b47c8dcf3afc10580",
+        "unit_size": 610,
+        "parent_dir": "9b"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/ac": {
+        "unit_type": "File",
+        "unit_name": "93d5a8ae64158b5463e22b5bac9665ee7c64f3",
+        "unit_size": 1147,
+        "parent_dir": "ac"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/cf": {
+        "unit_type": "File",
+        "unit_name": "7d6121aed2c70bf9bd1b7b36816e9f87fd3749",
+        "unit_size": 220,
+        "parent_dir": "cf"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/10": {
+        "unit_type": "File",
+        "unit_name": "fd7f6707c157e3ad22362064d9323a63a7dcc5",
+        "unit_size": 140,
+        "parent_dir": "10"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/7b": {
+        "unit_type": "File",
+        "unit_name": "ebc5322a0a27ecad1977dd11407b746ce99336",
+        "unit_size": 169,
+        "parent_dir": "7b"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/c1": {
+        "unit_type": "File",
+        "unit_name": "a6bb141a2f764ff31a4033b94fa9f28d4f023a",
+        "unit_size": 511,
+        "parent_dir": "c1"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/b2": {
+        "unit_type": "File",
+        "unit_name": "26951e314ad0dc4e98e3ddc8d3bd6ddfe76ada",
+        "unit_size": 145,
+        "parent_dir": "b2"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/c9": {
+        "unit_type": "File",
+        "unit_name": "f1206c8b8c2a50e639926bd4ec598b54781627",
+        "unit_size": 180,
+        "parent_dir": "c9"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/dd": {
+        "unit_type": "File",
+        "unit_name": "cbbfb4d6625b9105b7212635ebc72c85d23dba",
+        "unit_size": 181,
+        "parent_dir": "dd"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/c7": {
+        "unit_type": "File",
+        "unit_name": "c2c48d63de41677f28e0b97efaf2f80d10e4fa",
+        "unit_size": 1171,
+        "parent_dir": "c7"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/fe": {
+        "unit_type": "File",
+        "unit_name": "810767cee0ce75f336962f4f7dcc181c46b8d1",
+        "unit_size": 293,
+        "parent_dir": "fe"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/ad": {
+        "unit_type": "File",
+        "unit_name": "25165bb07c841fe9cff7c781cff583d6cf45af",
+        "unit_size": 245,
+        "parent_dir": "ad"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/3e": {
+        "unit_type": "File",
+        "unit_name": "4a5d8c22436bd353f933c20c8626214ff790c9",
+        "unit_size": 72,
+        "parent_dir": "3e"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/ea": {
+        "unit_type": "File",
+        "unit_name": "d5bd2caccc148edd660a8f04a5facf8d8600f1",
+        "unit_size": 1023,
+        "parent_dir": "ea"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/e2": {
+        "unit_type": "File",
+        "unit_name": "d29497dd4ec60d9ab4c8a91ee2a7626cdb3d97",
+        "unit_size": 186,
+        "parent_dir": "e2"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/3d": {
+        "unit_type": "File",
+        "unit_name": "be7165c55572c9a4a33febebdb9626b667dc97",
+        "unit_size": 150,
+        "parent_dir": "3d"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/8f": {
+        "unit_type": "File",
+        "unit_name": "dd63e64eb050b2c7b0cf945febc54c38b18611",
+        "unit_size": 122,
+        "parent_dir": "8f"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/ba": {
+        "unit_type": "File",
+        "unit_name": "74661f1cb751102937c5495a63ab880b65e62d",
+        "unit_size": 190,
+        "parent_dir": "ba"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/e1": {
+        "unit_type": "File",
+        "unit_name": "ee9da8b944e563e609b75c5295859bc28651da",
+        "unit_size": 124,
+        "parent_dir": "e1"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/3f": {
+        "unit_type": "File",
+        "unit_name": "82337bb3211a4e0b99146e00bc0e7e50045ad7",
+        "unit_size": 195,
+        "parent_dir": "3f"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/c8": {
+        "unit_type": "File",
+        "unit_name": "8d7795a2187a9acc769875d9397ba9d0ba6ba4",
+        "unit_size": 178,
+        "parent_dir": "c8"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/df": {
+        "unit_type": "File",
+        "unit_name": "fd1c0d66d6beec0a1193739c32de9892199c88",
+        "unit_size": 630,
+        "parent_dir": "df"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/6e": {
+        "unit_type": "File",
+        "unit_name": "5626bacce8c90fba50767d62f0de7b3f0600e2",
+        "unit_size": 252,
+        "parent_dir": "6e"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/1d": {
+        "unit_type": "File",
+        "unit_name": "1d2b3cb1c49ca06dc3c949304b250aef28dbad",
+        "unit_size": 55,
+        "parent_dir": "1d"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/60": {
+        "unit_type": "File",
+        "unit_name": "99a161d671001a21845f35572a26bcde562aef",
+        "unit_size": 123,
+        "parent_dir": "60"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/79": {
+        "unit_type": "File",
+        "unit_name": "ec151e3e153801ea197906a68caebc19b0a8c4",
+        "unit_size": 374,
+        "parent_dir": "79"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/69": {
+        "unit_type": "File",
+        "unit_name": "0e4df366e4a5c4b154af330752393566a4c1d2",
+        "unit_size": 1038,
+        "parent_dir": "69"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/64": {
+        "unit_type": "File",
+        "unit_name": "cb73a4eb496e38a4e80d8e983a31fee6bdc4f5",
+        "unit_size": 228,
+        "parent_dir": "64"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/86": {
+        "unit_type": "File",
+        "unit_name": "d652b6b1268040f0d9f214ddad262ec8a5ceef",
+        "unit_size": 525,
+        "parent_dir": "86"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/ec": {
+        "unit_type": "File",
+        "unit_name": "61a9d298fdbf3cd3e014e05a314c76822046c6",
+        "unit_size": 168,
+        "parent_dir": "ec"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/b5": {
+        "unit_type": "File",
+        "unit_name": "3ec26b621daf5d39b0fe8da54e825c519ae96e",
+        "unit_size": 194,
+        "parent_dir": "b5"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/0f": {
+        "unit_type": "File",
+        "unit_name": "ffc9a12a6fe4fe5e416da5d2b77d3c2ae33f1e",
+        "unit_size": 192,
+        "parent_dir": "0f"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/a6": {
+        "unit_type": "File",
+        "unit_name": "fc77bc92c52aef5991b6dd0d03f5427f9b1f72",
+        "unit_size": 100,
+        "parent_dir": "a6"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/cd": {
+        "unit_type": "File",
+        "unit_name": "99ce95993a00cae09271b978609dcde87c32d5",
+        "unit_size": 123,
+        "parent_dir": "cd"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/da": {
+        "unit_type": "File",
+        "unit_name": "0ad0cbe52e3d92a56c1f76a7746f17ecd0e75a",
+        "unit_size": 155,
+        "parent_dir": "da"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/80": {
+        "unit_type": "File",
+        "unit_name": "f8c44a78d1e6e5e9592ed8831e67f30eda2860",
+        "unit_size": 167,
+        "parent_dir": "80"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/0d": {
+        "unit_type": "File",
+        "unit_name": "c7c72bfa07dffb362d82eee2b4495606a85f49",
+        "unit_size": 244,
+        "parent_dir": "0d"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/4b": {
+        "unit_type": "File",
+        "unit_name": "1a238e0cac963980ee5259b359b030d3b0e8d7",
+        "unit_size": 123,
+        "parent_dir": "4b"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/71": {
+        "unit_type": "File",
+        "unit_name": "2dda5a1ac080f0b716f3d19a8913d556e2cec0",
+        "unit_size": 169,
+        "parent_dir": "71"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/73": {
+        "unit_type": "File",
+        "unit_name": "d815cc1045417d55dbfc051ca1caaeb4c1154e",
+        "unit_size": 724,
+        "parent_dir": "73"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/d2": {
+        "unit_type": "File",
+        "unit_name": "ca098116642ec53cb759d10930e7f289cfe1a1",
+        "unit_size": 1672,
+        "parent_dir": "d2"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/18": {
+        "unit_type": "File",
+        "unit_name": "1eb74851a9f2ee1a58c28b07a9bbb575c12ffe",
+        "unit_size": 910,
+        "parent_dir": "18"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/90": {
+        "unit_type": "File",
+        "unit_name": "932f0c6047c6019b0728b9714a87b297ac742f",
+        "unit_size": 98,
+        "parent_dir": "90"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/72": {
+        "unit_type": "File",
+        "unit_name": "057c139cf95f804d44558414f293b42119fcd3",
+        "unit_size": 54,
+        "parent_dir": "72"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/35": {
+        "unit_type": "File",
+        "unit_name": "04eb20681bd31b89d615377e7a31272cbc6447",
+        "unit_size": 670,
+        "parent_dir": "35"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/2b": {
+        "unit_type": "File",
+        "unit_name": "44e8857bdde0cc0627d33e422674d410791929",
+        "unit_size": 54,
+        "parent_dir": "2b"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/ef": {
+        "unit_type": "File",
+        "unit_name": "3e3ee62f34b93d2a637a61e9df4e720778f532",
+        "unit_size": 178,
+        "parent_dir": "ef"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/db": {
+        "unit_type": "File",
+        "unit_name": "5f9d416560dc25fcbe9723fa2728a6b3863977",
+        "unit_size": 229,
+        "parent_dir": "db"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/f0": {
+        "unit_type": "File",
+        "unit_name": "f37fe8ecb1e2c83117149205d91591af9f37ad",
+        "unit_size": 675,
+        "parent_dir": "f0"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/6d": {
+        "unit_type": "File",
+        "unit_name": "25c3887de8a33f00604f333b7d8c6580eaa43e",
+        "unit_size": 176,
+        "parent_dir": "6d"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/1c": {
+        "unit_type": "File",
+        "unit_name": "199aec3b2b7677a99db52406787ea6db40a3fe",
+        "unit_size": 143,
+        "parent_dir": "1c"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/b7": {
+        "unit_type": "File",
+        "unit_name": "7f2180eaa13c445cb056d1ba0f33dc43413335",
+        "unit_size": 229,
+        "parent_dir": "b7"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/15": {
+        "unit_type": "File",
+        "unit_name": "c4405bdefc064f65cbe1e33ee5779ecdb22171",
+        "unit_size": 99,
+        "parent_dir": "15"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/9d": {
+        "unit_type": "File",
+        "unit_name": "94bf9184139e6884fda81127ebafea9d592053",
+        "unit_size": 219,
+        "parent_dir": "9d"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/84": {
+        "unit_type": "File",
+        "unit_name": "28ef355c2bcd99159ff966bf6349f1eae2dec5",
+        "unit_size": 1975,
+        "parent_dir": "84"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/2e": {
+        "unit_type": "File",
+        "unit_name": "ab6b3411be94a185e15db1ac7b7a22b641470d",
+        "unit_size": 219,
+        "parent_dir": "2e"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/f7": {
+        "unit_type": "File",
+        "unit_name": "375f2692a31a305704bf73b2ab999736d4d8ae",
+        "unit_size": 181,
+        "parent_dir": "f7"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/66": {
+        "unit_type": "File",
+        "unit_name": "35abcbc4f254cdb292f0732c93512e0c1054dd",
+        "unit_size": 226,
+        "parent_dir": "66"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/f3": {
+        "unit_type": "File",
+        "unit_name": "314d58f9a15079f4c91926f404a194f0838e4f",
+        "unit_size": 259,
+        "parent_dir": "f3"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/1f": {
+        "unit_type": "File",
+        "unit_name": "06b51eda249b50663ecbed1c062f7127ee7753",
+        "unit_size": 680,
+        "parent_dir": "1f"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/fb": {
+        "unit_type": "File",
+        "unit_name": "651260add1071d0e0e945f550acc63e78237bd",
+        "unit_size": 245,
+        "parent_dir": "fb"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/e7": {
+        "unit_type": "File",
+        "unit_name": "677b658c6389c7b1cd1020223a81d478422a2c",
+        "unit_size": 183,
+        "parent_dir": "e7"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/c5": {
+        "unit_type": "File",
+        "unit_name": "a6bc072c32c8513d410a30b18d4e0f532b16fe",
+        "unit_size": 172,
+        "parent_dir": "c5"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/6b": {
+        "unit_type": "File",
+        "unit_name": "d951efcb9c86daaddca90ebe55fc542779dfc0",
+        "unit_size": 227,
+        "parent_dir": "6b"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/02": {
+        "unit_type": "File",
+        "unit_name": "a27645742fc8a4f2f84141a877d5de02677803",
+        "unit_size": 1916,
+        "parent_dir": "02"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/ab": {
+        "unit_type": "File",
+        "unit_name": "b44b19226be006d51e0e329d1106c4986d19f5",
+        "unit_size": 245,
+        "parent_dir": "ab"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/e8": {
+        "unit_type": "File",
+        "unit_name": "f3e00c981da4f814957989677e6a5ad2e97ce9",
+        "unit_size": 179,
+        "parent_dir": "e8"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/29": {
+        "unit_type": "File",
+        "unit_name": "e8ab54ec5147b7848e1b9f3d67d6b41f31cf84",
+        "unit_size": 115,
+        "parent_dir": "29"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/03": {
+        "unit_type": "File",
+        "unit_name": "4d2703415bdc2b38fb178b965dc74ff6b490e8",
+        "unit_size": 182,
+        "parent_dir": "03"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/5b": {
+        "unit_type": "File",
+        "unit_name": "581f1bdf617dba6a6ef248d18f0653b7b0b160",
+        "unit_size": 661,
+        "parent_dir": "5b"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/ee": {
+        "unit_type": "File",
+        "unit_name": "d058b8d34bb4c159d27ccb0eb95baa57162116",
+        "unit_size": 242,
+        "parent_dir": "ee"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/1b": {
+        "unit_type": "File",
+        "unit_name": "e715c5ebfddfc4115e9d1b9b52cfec50d6d6bd",
+        "unit_size": 144,
+        "parent_dir": "1b"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/00": {
+        "unit_type": "File",
+        "unit_name": "3f1cb9828da18cc397b3808e9a073db36f7f22",
+        "unit_size": 114,
+        "parent_dir": "00"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/c2": {
+        "unit_type": "File",
+        "unit_name": "442826d912fe3feae1e57789084c7cef5d9b61",
+        "unit_size": 1845,
+        "parent_dir": "c2"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/8b": {
+        "unit_type": "File",
+        "unit_name": "d963dc192d3cfe03a51bd57e697b0ad80228d5",
+        "unit_size": 118,
+        "parent_dir": "8b"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/61": {
+        "unit_type": "File",
+        "unit_name": "61c16662b1c625eb80589ebba5e709e4cdf79d",
+        "unit_size": 140,
+        "parent_dir": "61"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/96": {
+        "unit_type": "File",
+        "unit_name": "209d93d81e64a1931eaddedd53b88389ab74d3",
+        "unit_size": 123,
+        "parent_dir": "96"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/31": {
+        "unit_type": "File",
+        "unit_name": "1ebd624b8af7fa5f00e3ada0bdcf6927400308",
+        "unit_size": 1076,
+        "parent_dir": "31"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/40": {
+        "unit_type": "File",
+        "unit_name": "6268cef67ef7de1893f449d6656ecfd4e5d327",
+        "unit_size": 173,
+        "parent_dir": "40"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/05": {
+        "unit_type": "File",
+        "unit_name": "3da95314b4294311d99d68075e29b668b5e297",
+        "unit_size": 778,
+        "parent_dir": "05"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/01": {
+        "unit_type": "File",
+        "unit_name": "6c7bf3de3a3386efe522449117886e35f28236",
+        "unit_size": 725,
+        "parent_dir": "01"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/0b": {
+        "unit_type": "File",
+        "unit_name": "3e2c5d6ffdc93984374dfab0b6ad6856d87b4d",
+        "unit_size": 194,
+        "parent_dir": "0b"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/3c": {
+        "unit_type": "File",
+        "unit_name": "9c79c58643119780837fe03211ec455a353f0d",
+        "unit_size": 1650,
+        "parent_dir": "3c"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/a7": {
+        "unit_type": "File",
+        "unit_name": "9a5e0de4c0037c769743daf419fd3b8d6178da",
+        "unit_size": 187,
+        "parent_dir": "a7"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/bb": {
+        "unit_type": "File",
+        "unit_name": "f6df5bb156bfc4cabdd6adb60a41d298af44ed",
+        "unit_size": 219,
+        "parent_dir": "bb"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/04": {
+        "unit_type": "File",
+        "unit_name": "c775791d37281fc120326c943235e20cb5c90e",
+        "unit_size": 154,
+        "parent_dir": "04"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/75": {
+        "unit_type": "File",
+        "unit_name": "bbb4d9d3a2b231859dca5807db357e68ca7534",
+        "unit_size": 92,
+        "parent_dir": "75"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/b9": {
+        "unit_type": "File",
+        "unit_name": "1cef129f8bf882dcfb0f4c4f0234d0bc815949",
+        "unit_size": 564,
+        "parent_dir": "b9"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/f4": {
+        "unit_type": "File",
+        "unit_name": "aa8023dac48e6fe0cebd85d06f5acef5535fb2",
+        "unit_size": 446,
+        "parent_dir": "f4"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/d0": {
+        "unit_type": "File",
+        "unit_name": "bd56172b13455eaa0876338edb6ba2f08aa794",
+        "unit_size": 953,
+        "parent_dir": "d0"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/27": {
+        "unit_type": "File",
+        "unit_name": "aca5bbd14d39b72c3c67f95171cc7583feea39",
+        "unit_size": 184,
+        "parent_dir": "27"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/23": {
+        "unit_type": "File",
+        "unit_name": "4ba79aa081c8321187b70379710ac01aa9e914",
+        "unit_size": 2020,
+        "parent_dir": "23"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/9c": {
+        "unit_type": "File",
+        "unit_name": "3eb11e0df657c1115eac412b2a3a3f30816636",
+        "unit_size": 144,
+        "parent_dir": "9c"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/dc": {
+        "unit_type": "File",
+        "unit_name": "a18ab904ff2afa7d9006b086bea68d68f3ba20",
+        "unit_size": 173,
+        "parent_dir": "dc"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/1e": {
+        "unit_type": "File",
+        "unit_name": "1f03ae16c0292a3226b0adbb099fe71c1a0a4a",
+        "unit_size": 194,
+        "parent_dir": "1e"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/92": {
+        "unit_type": "File",
+        "unit_name": "b9bcceb163d995d927d6c048e6ea858c426411",
+        "unit_size": 183,
+        "parent_dir": "92"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/ff": {
+        "unit_type": "File",
+        "unit_name": "93223c865efeb7b6d8916be83e4636a92d532f",
+        "unit_size": 509,
+        "parent_dir": "ff"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/f6": {
+        "unit_type": "File",
+        "unit_name": "f220fcee61213347b2fb4c433a2517565b6058",
+        "unit_size": 115,
+        "parent_dir": "f6"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/b8": {
+        "unit_type": "File",
+        "unit_name": "dd3ee953c70f3567db6dd644bfd55d7eacf808",
+        "unit_size": 118,
+        "parent_dir": "b8"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/c0": {
+        "unit_type": "File",
+        "unit_name": "47edc021a46c1a19b7f36db8f7f633b47729ef",
+        "unit_size": 114,
+        "parent_dir": "c0"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/d7": {
+        "unit_type": "File",
+        "unit_name": "f68c9b97b2604b7426a2853334dc1e31e3d495",
+        "unit_size": 791,
+        "parent_dir": "d7"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/a0": {
+        "unit_type": "File",
+        "unit_name": "405cb756fac12e2283b8652c0bca94291656b9",
+        "unit_size": 252,
+        "parent_dir": "a0"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/fd": {
+        "unit_type": "File",
+        "unit_name": "9867741bf918d3d5203d8b6f992afae995a670",
+        "unit_size": 140,
+        "parent_dir": "fd"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/d3": {
+        "unit_type": "File",
+        "unit_name": "aa3154f8e61e249f8a33694315c83d59028b1b",
+        "unit_size": 91,
+        "parent_dir": "d3"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/38": {
+        "unit_type": "File",
+        "unit_name": "a53a37f6098a207dd77b5f5f624ed596980561",
+        "unit_size": 758,
+        "parent_dir": "38"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/c3": {
+        "unit_type": "File",
+        "unit_name": "78055290cdfe364375d2cf1fea16d22181f1d8",
+        "unit_size": 2129,
+        "parent_dir": "c3"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/af": {
+        "unit_type": "File",
+        "unit_name": "c3a13979b7c7821e0863a650f5af39699c16aa",
+        "unit_size": 312,
+        "parent_dir": "af"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/bf": {
+        "unit_type": "File",
+        "unit_name": "52bfe4c653d7b406f9a7c9145ce4ebe015af3a",
+        "unit_size": 1416,
+        "parent_dir": "bf"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/f2": {
+        "unit_type": "File",
+        "unit_name": "c8147f20f4eda97d7a4f6cfe9608547334d4b8",
+        "unit_size": 463,
+        "parent_dir": "f2"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/6a": {
+        "unit_type": "File",
+        "unit_name": "67090bf727ad10f91f8be9d82aa0fa75ee2199",
+        "unit_size": 175,
+        "parent_dir": "6a"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/08": {
+        "unit_type": "File",
+        "unit_name": "b7abe409f67ed003f5868f0f97ae22815fe2cf",
+        "unit_size": 88,
+        "parent_dir": "08"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/42": {
+        "unit_type": "File",
+        "unit_name": "8301a5655de9bb7870395b586adcff07499f03",
+        "unit_size": 757,
+        "parent_dir": "42"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/c6": {
+        "unit_type": "File",
+        "unit_name": "61b5f505604a320d484700cf64da238aa42661",
+        "unit_size": 593,
+        "parent_dir": "c6"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/e4": {
+        "unit_type": "File",
+        "unit_name": "6d74a3cc0161ea0fe806fd764cd800b17b35fd",
+        "unit_size": 769,
+        "parent_dir": "e4"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/82": {
+        "unit_type": "File",
+        "unit_name": "b742272177b6ad75ce0a3cda472f90e3e2ba81",
+        "unit_size": 498,
+        "parent_dir": "82"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/0a": {
+        "unit_type": "File",
+        "unit_name": "d3fa32245ebcb9d5ba1399394f050158a279ed",
+        "unit_size": 220,
+        "parent_dir": "0a"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/eb": {
+        "unit_type": "File",
+        "unit_name": "0d7bdd68ca2260e28e2e25d2c468caa9d044f2",
+        "unit_size": 143,
+        "parent_dir": "eb"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/8d": {
+        "unit_type": "File",
+        "unit_name": "a2bc3aa2d8472b87ec8d3bae45797870e18907",
+        "unit_size": 208,
+        "parent_dir": "8d"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/5d": {
+        "unit_type": "File",
+        "unit_name": "d14123c5a31351b22ab4f948207d7641f29df6",
+        "unit_size": 673,
+        "parent_dir": "5d"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/ce": {
+        "unit_type": "File",
+        "unit_name": "4a654ab38ea9cadcc11d1dc80a68a20022f708",
+        "unit_size": 382,
+        "parent_dir": "ce"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/c4": {
+        "unit_type": "File",
+        "unit_name": "002bbbf2464e06c484288cef9a57304ce413ab",
+        "unit_size": 169,
+        "parent_dir": "c4"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/6c": {
+        "unit_type": "File",
+        "unit_name": "20006ac2e76202dbc8ce797bd958df589fbc31",
+        "unit_size": 655,
+        "parent_dir": "6c"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/8e": {
+        "unit_type": "File",
+        "unit_name": "d57198a8f4165537e26644c49ff70022ceaf35",
+        "unit_size": 219,
+        "parent_dir": "8e"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/a2": {
+        "unit_type": "File",
+        "unit_name": "b662cc15fc732de290600ac363e0bd7569c1e9",
+        "unit_size": 181,
+        "parent_dir": "a2"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/88": {
+        "unit_type": "File",
+        "unit_name": "922391e3d5df5982cdd351d63dd0b0ba2821db",
+        "unit_size": 220,
+        "parent_dir": "88"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/d4": {
+        "unit_type": "File",
+        "unit_name": "d478b3b73d210a7cd0c6838e3ed08182df35e1",
+        "unit_size": 229,
+        "parent_dir": "d4"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/1a": {
+        "unit_type": "File",
+        "unit_name": "6a62c44a3c269f5a5c72238e5e0787a1c61ab2",
+        "unit_size": 86,
+        "parent_dir": "1a"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/f9": {
+        "unit_type": "File",
+        "unit_name": "43cc27678d86481622bb83935ae34caa1f1bfe",
+        "unit_size": 195,
+        "parent_dir": "f9"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/56": {
+        "unit_type": "File",
+        "unit_name": "98f6b04d30c09b6798337b4d664effa43c36d4",
+        "unit_size": 1340,
+        "parent_dir": "56"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/45": {
+        "unit_type": "File",
+        "unit_name": "6c3f659be776ac70477a229434bcbc083df5ab",
+        "unit_size": 163,
+        "parent_dir": "45"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/7f": {
+        "unit_type": "File",
+        "unit_name": "824f1884c6554d98bc390db3463ff1b2e12586",
+        "unit_size": 559,
+        "parent_dir": "7f"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/ed": {
+        "unit_type": "File",
+        "unit_name": "a4e76007319fbc820d32299f45ae549c104c1a",
+        "unit_size": 87,
+        "parent_dir": "ed"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/5c": {
+        "unit_type": "File",
+        "unit_name": "aa0ac879890dcec01b6c42329396971e79a9cc",
+        "unit_size": 1129,
+        "parent_dir": "5c"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/7c": {
+        "unit_type": "File",
+        "unit_name": "a65223b36ec2b68bc25fb7efc96d763274d4fa",
+        "unit_size": 1500,
+        "parent_dir": "7c"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/99": {
+        "unit_type": "File",
+        "unit_name": "9b502be55c21cd6ee3dfb3ba87b00a45c1ce98",
+        "unit_size": 318,
+        "parent_dir": "99"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/9a": {
+        "unit_type": "File",
+        "unit_name": "6c361e20b01b66c8b2d302f98a42dc7996228f",
+        "unit_size": 176,
+        "parent_dir": "9a"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/32": {
+        "unit_type": "File",
+        "unit_name": "a3256848351e22145a26c1d9b95d4cc3e9facb",
+        "unit_size": 789,
+        "parent_dir": "32"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/50": {
+        "unit_type": "File",
+        "unit_name": "3cd93e73b2a28171016684460f32bab4f8339c",
+        "unit_size": 466,
+        "parent_dir": "50"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/21": {
+        "unit_type": "File",
+        "unit_name": "baed914b185c8d14bd5e72174cafcf22cd20a5",
+        "unit_size": 176,
+        "parent_dir": "21"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/7a": {
+        "unit_type": "File",
+        "unit_name": "84a6de0425b405957f869db841877f0972bf48",
+        "unit_size": 632,
+        "parent_dir": "7a"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/aa": {
+        "unit_type": "File",
+        "unit_name": "6db9ee663fd0674f0c34afb8c39febf12dccc2",
+        "unit_size": 511,
+        "parent_dir": "aa"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/8a": {
+        "unit_type": "File",
+        "unit_name": "aab678ddb76c5d0922ef7adaed02abddb714f7",
+        "unit_size": 91,
+        "parent_dir": "8a"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/76": {
+        "unit_type": "File",
+        "unit_name": "ae2b79fab48a90d8cabd74411ad7ac4beeda5e",
+        "unit_size": 175,
+        "parent_dir": "76"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/f5": {
+        "unit_type": "File",
+        "unit_name": "f59c4553a0556225e3adfda88cb3c3263a84b0",
+        "unit_size": 195,
+        "parent_dir": "f5"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/f8": {
+        "unit_type": "File",
+        "unit_name": "4e7fac2e20f01dd149d4314595127eb3a46382",
+        "unit_size": 211,
+        "parent_dir": "f8"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/07": {
+        "unit_type": "File",
+        "unit_name": "b87182a0c34c662593950edcda4603a9b9174e",
+        "unit_size": 194,
+        "parent_dir": "07"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/09": {
+        "unit_type": "File",
+        "unit_name": "4578622aa55bb14c1d2b187fccefbfc388fae3",
+        "unit_size": 270,
+        "parent_dir": "09"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/24": {
+        "unit_type": "File",
+        "unit_name": "9e4abdb40ccf26ca420b4acf80e981ffe30887",
+        "unit_size": 54,
+        "parent_dir": "24"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/81": {
+        "unit_type": "File",
+        "unit_name": "b3a6f9c320fd115801b769b45cec719c8050a7",
+        "unit_size": 77,
+        "parent_dir": "81"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/a4": {
+        "unit_type": "File",
+        "unit_name": "4a2a49bd3786c8fbeb3091e8288549902d5e2e",
+        "unit_size": 233,
+        "parent_dir": "a4"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/33": {
+        "unit_type": "File",
+        "unit_name": "007708b5d613820626950f8386003adefc1f21",
+        "unit_size": 928,
+        "parent_dir": "33"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/20": {
+        "unit_type": "File",
+        "unit_name": "4d0454ba16820568c32c57db4b7384a705986f",
+        "unit_size": 415,
+        "parent_dir": "20"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/a1": {
+        "unit_type": "File",
+        "unit_name": "5beacaba0855c868f224cec5376c59df002682",
+        "unit_size": 212,
+        "parent_dir": "a1"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/3a": {
+        "unit_type": "File",
+        "unit_name": "d48d65e905cb4da5370ec70509b2b809c011ad",
+        "unit_size": 947,
+        "parent_dir": "3a"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/b4": {
+        "unit_type": "File",
+        "unit_name": "91d2d0f5c41b849355b7dc0a8140da56d07ca9",
+        "unit_size": 221,
+        "parent_dir": "b4"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/e6": {
+        "unit_type": "File",
+        "unit_name": "9de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "unit_size": 15,
+        "parent_dir": "e6"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/e0": {
+        "unit_type": "File",
+        "unit_name": "0c15ca7e86c602fb984182bcea7bcf5c59fb2c",
+        "unit_size": 177,
+        "parent_dir": "e0"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/a9": {
+        "unit_type": "File",
+        "unit_name": "842cbfc35fdb11e27ef2579662b782771723bd",
+        "unit_size": 175,
+        "parent_dir": "a9"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/2c": {
+        "unit_type": "File",
+        "unit_name": "64347d58a6ed486baaf8806bbdf507e7210865",
+        "unit_size": 175,
+        "parent_dir": "2c"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/9e": {
+        "unit_type": "File",
+        "unit_name": "2c726cb6a5c0852f6c66389d2ca9f7317ff5b2",
+        "unit_size": 281,
+        "parent_dir": "9e"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/25": {
+        "unit_type": "File",
+        "unit_name": "6a7739786c3d36ae64fea01533a03d12fad5a9",
+        "unit_size": 763,
+        "parent_dir": "25"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/9f": {
+        "unit_type": "File",
+        "unit_name": "22a9f176a527147f94c5ba1df667c429eace3e",
+        "unit_size": 229,
+        "parent_dir": "9f"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/36": {
+        "unit_type": "File",
+        "unit_name": "1fb859a8f8d27a1f2c15998f074900b09d0c3a",
+        "unit_size": 704,
+        "parent_dir": "36"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/d9": {
+        "unit_type": "File",
+        "unit_name": "a632aed0a07b5321fae8e9b13aad42b85090e4",
+        "unit_size": 169,
+        "parent_dir": "d9"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/ae": {
+        "unit_type": "File",
+        "unit_name": "c32016fffa22076f7a6b620b84f87cf5828598",
+        "unit_size": 875,
+        "parent_dir": "ae"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/78": {
+        "unit_type": "File",
+        "unit_name": "be2226b913d442ca6a36fac3821c3710cde8c6",
+        "unit_size": 1584,
+        "parent_dir": "78"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/objects/4a": {
+        "unit_type": "File",
+        "unit_name": "2c9ba56496547d58e86ddc5f150692c6cce646",
+        "unit_size": 179,
+        "parent_dir": "4a"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/hooks": {
+        "unit_type": "File",
+        "unit_name": "update.sample",
+        "unit_size": 3650,
+        "parent_dir": "hooks"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/.git/info": {
+        "unit_type": "File",
+        "unit_name": "exclude",
+        "unit_size": 240,
+        "parent_dir": "info"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/homework_03": {
+        "unit_type": "File",
+        "unit_name": "task02.py",
+        "unit_size": 531,
+        "parent_dir": "homework_03"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/homework_08": {
+        "unit_type": "Directory",
+        "unit_name": "hw08_task01",
+        "unit_size": 105742,
+        "parent_dir": "homework_08"
+    },
+    "/home/andrew/Documents/geekbrains/Python2023/Homeworks/homework_08/hw08_task01": {
+        "unit_type": "File",
+        "unit_name": "result.json",
+        "unit_size": 48210,
+        "parent_dir": "hw08_task01"
+    }
+}

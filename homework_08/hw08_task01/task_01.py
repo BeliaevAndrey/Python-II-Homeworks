@@ -16,8 +16,14 @@ def jsn_writer(in_dct: dict, path: str, file_name: str) -> None:
         json.dump(in_dct, f_out, indent=4)
 
 
-def csv_writer(in_dct: dict) -> None:
-    ...
+def csv_writer(in_dct: dict, path: str, file_name: str) -> None:
+    file_path = os.path.join(path, file_name + '.csv')
+    data = [['Basic_path', 'unit_type',  'unit_name', 'unit_size', ' parent_dir', ]]
+    for i_key, i_val in in_dct.items():
+        data.append([i_key, *i_val.values()])
+    with open(file_path, 'w', encoding='utf-8') as f_out:
+        write_csv = csv.writer(f_out, dialect='excel', delimiter=';')
+        write_csv.writerows(data)
 
 
 def pcl_writer(in_dct: dict, path: str, file_name: str) -> None:
@@ -58,7 +64,7 @@ def dir_walker(aim_path: str,
                total_dct: dict = None) -> dict[str, dict[str]]:
     if total_dct is None:
         total_dct = {}
-        basic_path = os.path.split(aim_path)
+        basic_path = os.path.split(os.path.abspath(aim_path))
         dct_formatter(total_dct,
                       os.path.join(*basic_path[:-1]),
                       basic_path[-1],
@@ -89,9 +95,10 @@ def main():
     result = dir_walker(tst_path)
     jsn_writer(result, os.getcwd(), 'result')
     pcl_writer(result, os.getcwd(), 'result')
-    for val in result.values():
-        for i_key in val.keys():
-            print(i_key)
+    csv_writer(result, os.getcwd(), 'result')
+    # for val in result.values():
+    #     for i_key in val.keys():
+    #         print(i_key)
 
 
 if __name__ == '__main__':
