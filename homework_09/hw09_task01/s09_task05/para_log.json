@@ -1,0 +1,150 @@
+[
+    {
+        "args": {
+            "arg0": 28,
+            "arg1": 1
+        },
+        "kwargs": {},
+        "result": null
+    },
+    {
+        "args": {
+            "arg0": 91,
+            "arg1": 1
+        },
+        "result": null
+    },
+    {
+        "args": {
+            "arg0": 98,
+            "arg1": 1
+        },
+        "result": null
+    },
+    {
+        "args": {
+            "arg0": 96,
+            "arg1": 1
+        },
+        "result": null
+    },
+    {
+        "args": {
+            "arg0": 68,
+            "arg1": 1
+        },
+        "result": null
+    },
+    {
+        "args": {
+            "arg0": 17,
+            "arg1": 1
+        },
+        "result": null
+    },
+    {
+        "args": {
+            "arg0": 70,
+            "arg1": 1
+        },
+        "result": null
+    },
+    {
+        "args": {
+            "arg0": 99,
+            "arg1": 1
+        },
+        "result": null
+    },
+    {
+        "args": {
+            "arg0": 20,
+            "arg1": 1
+        },
+        "result": null
+    },
+    {
+        "args": {
+            "arg0": 71,
+            "arg1": 1
+        },
+        "result": null
+    },
+    {
+        "args": {
+            "arg0": 61,
+            "arg1": 9
+        },
+        "result": null
+    },
+    {
+        "args": {
+            "arg0": 38,
+            "arg1": 8
+        },
+        "result": null
+    },
+    {
+        "args": {
+            "arg0": 14,
+            "arg1": 10
+        },
+        "result": null
+    },
+    {
+        "args": {
+            "arg0": 19,
+            "arg1": 1
+        },
+        "result": null
+    },
+    {
+        "args": {
+            "arg0": 91,
+            "arg1": 8
+        },
+        "result": null
+    },
+    {
+        "args": {
+            "arg0": 35,
+            "arg1": 10
+        },
+        "result": null
+    },
+    {
+        "args": {
+            "arg0": 12,
+            "arg1": 5
+        },
+        "result": null
+    },
+    {
+        "args": {
+            "arg0": 39,
+            "arg1": 9
+        },
+        "result": null
+    },
+    {
+        "args": {
+            "arg0": 80,
+            "arg1": 5
+        },
+        "result": "You loose. Right number is 80"
+    },
+    {
+        "args": {
+            "arg0": 80,
+            "arg1": 5
+        },
+        "result": "Have not result yet"
+    },
+    {
+        "args": {
+            "arg0": 80,
+            "arg1": 5
+        },
+        "result": "Have not result yet"
+    }
+]

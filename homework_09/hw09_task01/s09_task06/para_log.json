@@ -1,0 +1,66 @@
+[
+    {
+        "args": {
+            "arg0": 80,
+            "arg1": 5
+        },
+        "kwargs": {},
+        "result": "You loose. Right number is 80"
+    },
+    {
+        "args": {
+            "arg0": 80,
+            "arg1": 5
+        },
+        "result": "You loose. Right number is 80"
+    },
+    {
+        "args": {
+            "arg0": 80,
+            "arg1": 5
+        },
+        "result": "Your number is lesser then right"
+    },
+    {
+        "args": {
+            "arg0": 10,
+            "arg1": 1
+        },
+        "result": "Have not result yet"
+    },
+    {
+        "args": {
+            "arg0": 10,
+            "arg1": 1
+        },
+        "result": "You loose. Right number is 10"
+    },
+    {
+        "args": {
+            "arg0": 10,
+            "arg1": 1
+        },
+        "result": "Have not result yet"
+    },
+    {
+        "args": {
+            "arg0": 10,
+            "arg1": 1
+        },
+        "result": "You loose. Right number is 10"
+    },
+    {
+        "args": {
+            "arg0": 10,
+            "arg1": 1
+        },
+        "result": "You loose. Right number is 10"
+    },
+    {
+        "args": {
+            "arg0": 10,
+            "arg1": 1
+        },
+        "result": "You loose. Right number is 10"
+    }
+]
