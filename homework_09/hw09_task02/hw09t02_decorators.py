@@ -5,7 +5,8 @@ import json
 from functools import wraps
 
 __all__ = [
-    'starting_decor'
+    'starting_decor',
+    'dump_to_json_dec'
 ]
 
 
@@ -28,9 +29,8 @@ def _read_json_para(filename: str) -> list[dict[str, dict[str]]]:
     if os.path.exists(filename) and os.path.getsize(filename) > 0:
         with open(filename, 'r', encoding='utf-8') as f_in:
             parameters = json.load(f_in)
-            parameters.append({})
     else:
-        parameters = [{'args': {}, 'kwargs': {}, 'result': None}]
+        parameters = []
     return parameters
 
 
@@ -44,9 +44,10 @@ def _dump_json_para(filename: str,
 # Decorators section
 def starting_decor(file_name: str) -> Callable:
     """Starts wrapper of calculating function"""
+
     def inner(func: Callable) -> Callable:
 
-        @wraps(func)    # This allows a doc-string of function to be in reach.
+        @wraps(func)  # This allows a doc-string of "func" to be in reach.
         def wrapper(*args) -> Any:
             """
             Calls calculating function once if args are,
@@ -68,21 +69,32 @@ def starting_decor(file_name: str) -> Callable:
 
 
 def dump_to_json_dec(file_name: str) -> Callable:
+    """
+    Decorating function, dumps a parameters and results dictionary to a json-file.
+    Warning: file is updated, not rewritten.
+    """
+
     def inner_dec(func: Callable) -> Callable:
+        param_res = []  # caching list
+        call_count = 0  # accumulates call amt
+
         @wraps(func)
-        def wrapper(*args, **kwargs) -> Any:
-            parameters = _read_json_para(file_name)
-            if args:
-                parameters[-1]['args'] = {f'arg{i}': args[i] for i in range(len(args))}
-            if kwargs:
-                parameters[-1]['kwargs'] = kwargs
-            result = func(*args, **kwargs)
-            parameters[-1]['result'] = result
-            _dump_json_para(file_name, parameters)
+        def wrapper(*args) -> Any:
+            nonlocal call_count
+            nonlocal param_res
+            call_count += 1
+            if not param_res:
+                param_res = _read_json_para(file_name)
+            param_res.append({'args': {'No': call_count,
+                                       'a': args[0],
+                                       'b': args[1],
+                                       'c': args[2],
+                                       }})
+            result = func(*args)
+            param_res[-1]['result'] = result
+            _dump_json_para(file_name, param_res)
             return result
 
         return wrapper
 
     return inner_dec
-
-

@@ -1,13 +1,14 @@
 from random import randint as r_int, uniform as r_unf
 import csv
 # from typing import Any
-from hw09t02_decorators import starting_decor
+from hw09t02_decorators import starting_decor, dump_to_json_dec
 
 STRINGS_LO_LIM = 100
 STRINGS_HI_LIM = 1000
 CFT_RANGE_LO_LIM = -10
 CFT_RANGE_HI_LIM = 10
 SRC_FILE_NAME = 'tst_cft_src.csv'
+JSON_FILENAME = 'tst_out_file.json'
 
 
 def gen_csv_rand_nums(file_name: str, tst_mode: bool = True) -> None:
@@ -35,6 +36,7 @@ def gen_csv_rand_nums(file_name: str, tst_mode: bool = True) -> None:
 
 
 @starting_decor(SRC_FILE_NAME)
+@dump_to_json_dec(JSON_FILENAME)
 def square_eq_root(a_cft: float, b_cft: float, c_cft: float) -> [float, tuple[float, float], None]:
     """
     Finds roots of square equation
@@ -56,7 +58,7 @@ def square_eq_root(a_cft: float, b_cft: float, c_cft: float) -> [float, tuple[fl
 
 def main():
     print(square_eq_root(-1.54, 4.467, 9.188))
-    gen_csv_rand_nums(SRC_FILE_NAME, False)
+    gen_csv_rand_nums(SRC_FILE_NAME, tst_mode=False)
     # cft: list[Any] = read_csv_rand_nums('tst_cft_src.csv')
     # cft[0].append('Result')
     # for row in cft[1:]:
