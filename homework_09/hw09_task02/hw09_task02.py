@@ -24,16 +24,6 @@ def gen_csv_rand_nums(file_name: str, tst_mode: bool = True) -> None:
         write_csv = csv.writer(f_out, dialect='excel', delimiter=';')
         write_csv.writerows(coefficients_lst)
 
-#
-# def read_csv_rand_nums(file_name: str) -> list[list[str, int]]:
-#     coefficients = []
-#     with open(file_name, 'r', encoding='utf-8') as f_in:
-#         read_csv = csv.reader(f_in, dialect='excel', delimiter=';')
-#         coefficients.append(next(read_csv))
-#         for row in read_csv:
-#             coefficients.append([int(row[0])] + [*map(float, row[1:])])
-#     return coefficients
-
 
 @starting_decor(SRC_FILE_NAME)
 @dump_to_json_dec(JSON_FILENAME)
@@ -59,13 +49,7 @@ def square_eq_root(a_cft: float, b_cft: float, c_cft: float) -> [float, tuple[fl
 def main():
     print(square_eq_root(-1.54, 4.467, 9.188))
     gen_csv_rand_nums(SRC_FILE_NAME, tst_mode=False)
-    # cft: list[Any] = read_csv_rand_nums('tst_cft_src.csv')
-    # cft[0].append('Result')
-    # for row in cft[1:]:
-    #     row.append(square_eq_root(*row[1:]))
     results = square_eq_root()
-    # for row in results[1:]:
-    #     print(*row, sep='\t')
     print('|{:^7}|{:^10}|{:^10}|{:^10}||{:^20}|'.format(*results[0]))
     print('-' * 64)
     for row in results[1:]:
