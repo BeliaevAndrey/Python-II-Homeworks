@@ -1,6 +1,5 @@
 from random import randint as r_int, uniform as r_unf
 import csv
-# from typing import Any
 from hw09t02_decorators import starting_decor, dump_to_json_dec
 
 STRINGS_LO_LIM = 100
