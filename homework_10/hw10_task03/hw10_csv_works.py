@@ -6,8 +6,8 @@ class CsvWorks:
 
     @classmethod
     def csv_reader(cls,
+                   input_file_path: str,
                    input_file_name: str,
-                   input_file_path: str = os.getcwd(),
                    ) -> list[dict[str]]:
         """
         Reads a csv-file with headers to list of dicts
@@ -16,16 +16,51 @@ class CsvWorks:
         out_dict_list = []
         input_file = os.path.join(input_file_path, input_file_name)
         with open(input_file, 'r', encoding='utf-8') as f_in:
-            read_csv = csv.DictReader(f_in, dialect='excel', delimiter=';')
-            keys = (next(read_csv))
-            for row in read_csv:
-                out_dict_list.append({key: item for key, item in zip(keys, row)})
+            print(f'Are these ones headers:\n {f_in.readline()}')
+            f_in.seek(0)
+            while True:
+                answer = input('[Y/N]: ').lower()
+                if answer in ['y', 'n']:
+                    break
+                else:
+                    print("'Y' or 'N' Only, please.")
+            if answer == 'y':
+                read_csv = csv.DictReader(f_in, dialect='excel', delimiter=';')
+                keys = read_csv.fieldnames
+                for row in read_csv.reader:
+                    out_dict_list.append({key: item for key, item in zip(keys, row)})
+            else:
+                read_csv = csv.reader(f_in, dialect='excel', delimiter=';')
+                for row in read_csv:
+                    if len(row) == 2:
+                        out_dict_list.append({row[0]: row[1]})
+                    else:
+                        out_dict_list.append({row[0]: {row[1]: row[2:]}})
         return out_dict_list
 
+    # @classmethod
+    # def csv_reader(cls,
+    #                input_file_path: str,
+    #                input_file_name: str,
+    #                ) -> list[dict[str]]:
+    #     """
+    #     Reads a csv-file with headers to list of dicts
+    #     :return: list[dict[str]]
+    #     """
+    #     out_dict_list = []
+    #     input_file = os.path.join(input_file_path, input_file_name)
+    #     with open(input_file, 'r', encoding='utf-8') as f_in:
+    #         read_csv = csv.reader(f_in, dialect='excel', delimiter=';')
+    #         keys = (next(read_csv))
+    #         print('Keys:', keys)
+    #         for row in read_csv:
+    #             out_dict_list.append({key: item for key, item in zip(keys, row)})
+    #     return out_dict_list
+    #
     @classmethod
     def csv_writer(cls, in_dct: [list[dict], dict],
+                   output_file_path: str,
                    output_file_name: str,
-                   output_file_path: str = os.getcwd(),
                    ) -> None:
         """
          Writes to disk a csv-file of dictionary passed, ";" used as delimiter

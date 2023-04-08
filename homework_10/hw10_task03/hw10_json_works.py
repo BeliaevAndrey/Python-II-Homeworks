@@ -6,8 +6,8 @@ class JsonWorks:
 
     @staticmethod
     def json_writer(in_dct: [list, dict],
+                    output_file_path: str,
                     output_file_name: str,
-                    output_file_path: str = os.getcwd(),
                     ) -> None:
         """
          Writes to disk json file of dictionary passed
@@ -21,8 +21,8 @@ class JsonWorks:
             json.dump(in_dct, f_out, indent=4)
 
     @staticmethod
-    def json_reader(output_file_name: str,
-                    output_file_path: str = os.getcwd(),
+    def json_reader(output_file_path: str,
+                    output_file_name: str,
                     ) -> dict[str]:
         """
         Reads json file to a dictionary

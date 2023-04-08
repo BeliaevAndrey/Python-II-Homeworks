@@ -1,14 +1,13 @@
 import pickle
 import os
-from datetime import datetime as dt
 
 
 class PickleWorks:
 
     @staticmethod
     def pickle_writer(in_dct: [list[dict], dict],
+                      output_file_path: str,
                       output_file_name: str,
-                      output_file_path: str = os.getcwd(),
                       ) -> None:
         """
          Writes to disk binary file of dictionary passed
@@ -22,16 +21,16 @@ class PickleWorks:
             pickle.dump(in_dct, f_out)
 
     @staticmethod
-    def pickle_reader(output_file_name: str,
-                      output_file_path: str = os.getcwd(),
+    def pickle_reader(input_file_path: str,
+                      input_file_name: str,
                       ) -> list[dict[str]]:
         """
         Reads binary file to a list of dictionaries
-        :param output_file_path: str    -- path to a file to be read
-        :param output_file_name: str
+        :param input_file_path: str    -- path to a file to be read
+        :param input_file_name: str
         :return: list[dict[str]]
         """
-        file_path = os.path.join(output_file_path, output_file_name)
+        file_path = os.path.join(input_file_path, input_file_name)
         with open(file_path, 'rb') as f_in:
             out_lst = pickle.load(f_in, encoding='utf-8')
         return out_lst
