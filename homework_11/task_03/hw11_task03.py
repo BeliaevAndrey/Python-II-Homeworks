@@ -84,13 +84,16 @@ class Matrix:
         return True
 
     def __ne__(self, other) -> bool:
+        """Returns True if the matrix not equals to other"""
         return not self.__eq__(other)
 
     def __str__(self) -> str:
+        """User-readable representation method"""
         return '\n'.join(['\t'.join(map(str, row)) for row in self._a_matrix]) + '\n'
 
     def __repr__(self):
-        return f'(Matrix{self._a_matrix})'
+        """String object representation method"""
+        return f'Matrix({self._a_matrix})'
 
 
 def main():
