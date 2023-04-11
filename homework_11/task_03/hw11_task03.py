@@ -35,19 +35,6 @@ class Matrix:
                 new_matrix[j][i] = self._a_matrix[j][i] + other._a_matrix[j][i]
         return Matrix(new_matrix)
 
-    """
-       static int[][] mMultiply(int[][] matrixL, int[][] matrixR) {
-            int[][] rMatrix = new int[matrixL.length][matrixR[0].length];
-            for (int i = 0; i < matrixL.length; i++) {
-                for (int j = 0; j < matrixR[0].length; j++) {
-                    for (int k = 0; k < matrixR.length; k++) {
-                        rMatrix[i][j] += matrixL[i][k] * matrixR[k][j];
-                    }
-                }
-            }
-    
-    """
-
     def __mul__(self, other) -> 'Matrix':
         """
         Calculates a multiplication of matrices or multiplication the matrix by a number
