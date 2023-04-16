@@ -1,35 +1,56 @@
 import csv
 from valid import Naming, Marks
 
+_LO_LIM_MARKS = 2
+_HI_LIM_MARKS = 5
+_LO_LIM_TESTS = 0
+_HI_LIM_TESTS = 100
+
 
 class Student:
-    first_name = Naming()
-    patronymic = Naming()
-    last_name = Naming()
+    first_name = Naming(str.isalpha,
+                        "Only letters are allowed in names",
+                        str.istitle,
+                        "First letter must be capital")
+    patronymic = Naming(str.isalpha,
+                        "Only letters are allowed in names",
+                        str.istitle,
+                        "First letter must be capital")
+    last_name = Naming(str.isalpha,
+                       "Only letters are allowed in names",
+                       str.istitle,
+                       "First letter must be capital")
+    marks = Marks(_LO_LIM_MARKS, _HI_LIM_MARKS)
+    tests = Marks(_LO_LIM_TESTS, _HI_LIM_TESTS)
 
-    def __init__(self, first_name, patronymic, second_name, subjects_file):
+    def __init__(self, first_name, patronymic, last_name):
         self.first_name = first_name
         self.patronymic = patronymic
-        self.last_name = second_name
-        with open(subjects_file, 'r', encoding='utf-8') as f_in:
-            csv_reader = csv.reader(f_in, dialect='excel')
-            self._subjects = tuple(next(csv_reader))
-        self.marks = Marks(self._subjects)
-        self.tests = Marks(self._subjects)
+        self.last_name = last_name
 
     def __str__(self):
-        return f'{self.first_name} {self.patronymic} {self.last_name}'
+        return (f'\n{"=" * 60}'
+                f'\n{self._first_name} {self._patronymic} {self._last_name}'
+                f'\nAverage mark on whole subjects: {self.get_marks_average()}'
+                f'\nAverage tests balls for every subject:'
+                f'\n{self.averages_str()}'
+                f'\n{"=" * 60}')
+ 
+    def get_tests_average(self) -> dict[str, float]:
+        result = {}
+        for i_subj, i_balls in self.tests.items():
+            result[i_subj] = round(sum(i_balls) / len(i_balls), 3)
+        return result
 
-    @property
-    def subjects(self):
-        return self._subjects
+    def get_marks_average(self) -> float:
+        result = []
+        for i_marks in self.marks.values():
+            result.append(sum(i_marks) / len(i_marks))
+        return round(sum(result) / len(result), 3)
 
-    @subjects.setter
-    def subjects(self, value: tuple):
-        if not self._subjects:
-            self._subjects = value
-        else:
-            raise AttributeError(f'Once set, parameter "subjects" cannot be changed')
+    def averages_str(self) -> str:
+        return '\n'.join([f'{i_key + ":":_<30}{i_val:<10}'
+                          for i_key, i_val in self.get_tests_average().items()])
 
 
 if __name__ == '__main__':
