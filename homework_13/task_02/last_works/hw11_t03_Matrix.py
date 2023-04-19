@@ -108,41 +108,5 @@ class Matrix:
         return f'Matrix({self._a_matrix})'
 
 
-def main():
-    mtx_a = Matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12]])
-    mtx_b = Matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12]])
-    mtx_c = Matrix([[10, 11, 12], [4, 5, 6], [1, 2, 3], [7, 8, 9]])
-    mtx_d = Matrix([[1, 2, 3, 4, ], [5, 6, 7, 8], [9, 10, 11, 12]])
-    print(repr(mtx_a))
-    print(mtx_a)
-    print(mtx_b)
-    print(mtx_c)
-    print(mtx_d)
-
-    print(f'{mtx_a == mtx_b=}')
-    print(f'{mtx_a == mtx_b=}')
-    print(f'{mtx_b == mtx_c=}')
-    print(f'{mtx_b != mtx_c=}')
-    print(f'{mtx_c != mtx_d=}')
-    print(mtx_a + mtx_b)
-    print(mtx_a + mtx_c)
-    try:
-        print(mtx_c + mtx_d)
-    except ValueError as exc:
-        print(f'FAIL! {exc.__class__.__name__}: {exc}')
-    try:
-        print(mtx_a * mtx_b)
-    except ValueError as exc:
-        print(f'FAIL! {exc.__class__.__name__}: {exc}')
-    try:
-        print(mtx_a * mtx_d)
-    except ValueError as exc:
-        print(f'FAIL! {exc.__class__.__name__}: {exc}')
-    try:
-        print(mtx_a * 10)
-    except TypeError as exc:
-        print(f'FAIL! {exc.__class__.__name__}: {exc}')
-
-
 if __name__ == '__main__':
-    main()
+    print('Now it\'s a module')

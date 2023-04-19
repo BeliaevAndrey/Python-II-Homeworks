@@ -1,5 +1,6 @@
 from .RectangeExc import RectangleTypeError, RectangleValueError
 from .MatrixExc import ConsistencyMatrixError, MatrixTypeError, MatrixValueError, MatrixMultiplyError
+from .FileListerExc import FileListerExtensionError, FileListerObjectError, FileListerPathError
 
 __all__ = [
     'RectangleTypeError',
@@ -8,4 +9,7 @@ __all__ = [
     'MatrixTypeError',
     'MatrixValueError',
     'MatrixMultiplyError',
+    'FileListerExtensionError',
+    'FileListerObjectError',
+    'FileListerPathError',
 ]
