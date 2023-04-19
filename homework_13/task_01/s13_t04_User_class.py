@@ -17,7 +17,7 @@ class User:
         return f'UID: {self.u_id}; Name: {self.u_name}; level: {self.acs_level} '
 
     def __repr__(self):
-        return f'User(acs_level={self.acs_level}, u_id={self.u_id}, u_name={self.u_name})'
+        return f'User(acs_level={self.acs_level}, u_id={self.u_id}, u_name="{self.u_name}")'
 
     def __eq__(self, other):
         if not isinstance(other, type(self)):
@@ -25,7 +25,7 @@ class User:
         return self.u_id == other.u_id and self.u_name == other.u_name
 
     def __hash__(self):
-        return hash(self.u_name) + hash(self.u_id)
+        return hash((self.u_name, self.u_id))
 
 
 def forming_fun(file_name: str) -> set[User]:

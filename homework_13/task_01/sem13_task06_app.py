@@ -14,7 +14,7 @@ class TaskFive:
         self.authorized = set()
 
     @staticmethod
-    def scan_uid_uname():
+    def read_uid_uname():
         while True:
             try:
                 u_id = int(input('input user ID: '))
@@ -27,7 +27,7 @@ class TaskFive:
     def entrance(self, u_id: int = -1, u_name: str = ''):
         stub_level = 0
         if not u_name or u_id == -1:
-            u_id, u_name = self.scan_uid_uname()
+            u_id, u_name = self.read_uid_uname()
         tmp_user = User('0', str(u_id), u_name)
         if tmp_user not in self.users_set:
             raise AccessError(u_id=u_id, u_name=u_name)
@@ -42,36 +42,18 @@ class TaskFive:
         return self.authorized
 
 
-def authorize(an_object: TaskFive, in_str: str):
-    task_five = an_object
-    try:
-        eval(in_str)
-    except (AccessError, LevelError) as exc:
-        print(f'\033[31m{exc.__class__.__name__}: {exc}\033[0m')
-
-
 def main():
     task_five = TaskFive('index.json')
-    for item in ('task_five.entrance(2342, "asdfghj")',
-                 'task_five.entrance(234324, "qwertyyuiop")',
-                 'task_five.entrance(214235423, "zxcvbnm")',
-                 'task_five.entrance(123, "name 5")',
-                 'task_five.entrance(124, "name 3")',
-                 'task_five.entrance(46, "sfsfsd")',
-                 'task_five.entrance(46, "sfsfsd")',
-                 'task_five.entrance(46, "sfsfsd")',
-                 'task_five.entrance(46, "sfsfsd")',
-                 'task_five.entrance(46, "sfsfsd")',
-                 'task_five.entrance(46, "sfsfsd")',
-                 'task_five.entrance(125, "name 2")',
-                 'task_five.entrance(126, "name 1")',
-                 'task_five.entrance(126, "name 1")',
-                 'task_five.entrance(126, "name 1")',
-                 'task_five.entrance(126, "name 2")',
-                 'task_five.entrance(125, "name 1")',
-                 'task_five.entrance(000, "Someone left")',
+    for item in ((2342, "asdfghj"), (234324, "qwertyyuiop"), (214235423, "zxcvbnm"), (123, "name 5"),
+                 (124, "name 3"), (46, "sfsfsd"), (46, "sfsfsd"), (46, "sfsfsd"), (46, "sfsfsd"),
+                 (46, "sfsfsd"), (46, "sfsfsd"),(125, "name 2"), (126, "name 1"), (126, "name 1"),
+                 (126, "name 1"), (126, "name 2"), (125, "name 1"), (000, "Someone left"),
                  ):
-        authorize(task_five, item)
+        try:
+            task_five.entrance(*item)
+        except (AccessError, LevelError) as exc:
+            print(f'\033[31m{exc.__class__.__name__}: {exc}\033[0m')
+
     print(task_five.get_authorized())
 
 
