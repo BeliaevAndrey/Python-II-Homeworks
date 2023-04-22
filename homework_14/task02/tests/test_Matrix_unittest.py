@@ -1,6 +1,4 @@
 import unittest
-from unittest.mock import patch
-import io
 
 from homework_14.task02.last_works import Matrix
 from homework_14.task02.custom_exceptions import (ConsistencyMatrixError,
