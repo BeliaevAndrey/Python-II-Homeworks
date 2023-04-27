@@ -27,5 +27,5 @@ class FileListerWorks:
         if not file_ext:
             self._logger.error(f'Extension is not passed to class')
             raise FileListerExtensionError
-        self._logger.info(f'Returning files list for dir: {full_path}; for files with "{file_ext}" extension')
+        self._logger.info(f'Returning files list for dir: {self._lister.start_path}; for files with "{file_ext}" extension')
         return self._lister.list_files(file_ext, full_path)
