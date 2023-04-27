@@ -21,7 +21,6 @@ def file_search(start_path: str, file_ext: str) -> None:
 def main():
     parser = argparse.ArgumentParser(description='hw15_task02')
     parser.add_argument('m', metavar='mode', help='Mode switch: "atm" for ATM, "files" for file recursive search')
-    # parser.add_argument('files', metavar='FileLister', help='Start File-Lister task from homework 10')
     parser.add_argument('-p', metavar='path', type=str,
                         help='Path to search files (default: current dir)', default='.')
     parser.add_argument('-e', metavar='ext', type=str,
