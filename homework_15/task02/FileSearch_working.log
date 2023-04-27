@@ -1,2 +1,6 @@
 2023-04-27 15:52:38,170 - INFO: Lister created for directory: .
 2023-04-27 15:52:38,170 - INFO: Returning files list for dir: True; for files with "py" extension
+2023-04-27 15:58:28,121 - INFO: Lister created for directory: .
+2023-04-27 15:58:28,121 - INFO: Returning files list for dir: True; for files with "py" extension
+2023-04-27 15:59:03,118 - INFO: Lister created for directory: /home/andrew/Documents/geekbrains/Python2023/Homeworks/
+2023-04-27 15:59:03,118 - INFO: Returning files list for dir: True; for files with "json" extension
