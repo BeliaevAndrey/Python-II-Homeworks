@@ -33,6 +33,7 @@ def walk_dir(path_string: str):
             common_log.info(msg=str(fs_objects[-1]))
     except Exception as exc:
         print(f'\033[31mERROR: {exc.__class__.__name__}: {exc}\033[0m')
+        common_log.error(msg=f'{exc.__class__.__name__}: {exc}')
     return fs_objects
 
 

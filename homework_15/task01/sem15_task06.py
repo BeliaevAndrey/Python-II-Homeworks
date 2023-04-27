@@ -11,10 +11,19 @@ from hw15_utils import walk_dir
 import argparse
 
 
+def parse_ars():
+    parser = argparse.ArgumentParser(description='hw15t01_s15t06')
+    parser.add_argument('-p', metavar='path', type=str, nargs='*', default='.', help='Enter a path(s) to directory(s) to list')
+    args = parser.parse_args()
+    return args.p
+
+
 def main():
-    for item in (walk_dir('hw15_utils')):
-        print(repr(item))
+    for place in parse_ars():
+        for item in (walk_dir(place)):
+            print(repr(item))
 
 
 if __name__ == '__main__':
+    # CLI example: -p hw15_utils ../task01
     main()

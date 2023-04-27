@@ -1,8 +1,0 @@
-2023-04-27 00:23:40,930 - WARNING: Path setting default path (current dir): /large/data2/Home/Andrew/Documents/geekbrains/Python2023/Homeworks/homework_15/task01
-2023-04-27 00:23:40,931 - INFO: FSObject(name='hw15_utils', ext='', is_dir=True, parent='task01')
-2023-04-27 00:23:40,931 - INFO: FSObject(name='hw15t01_file_list', ext='txt', is_dir=False, parent='task01')
-2023-04-27 00:23:40,931 - INFO: FSObject(name='sem15_task06', ext='py', is_dir=False, parent='task01')
-2023-04-27 00:25:30,424 - INFO: FSObject(name='__init__', ext='py', is_dir=False, parent='hw15_utils')
-2023-04-27 00:25:30,425 - INFO: FSObject(name='dir_walker', ext='py', is_dir=False, parent='hw15_utils')
-2023-04-27 00:25:30,425 - INFO: FSObject(name='common_log_util', ext='py', is_dir=False, parent='hw15_utils')
-2023-04-27 00:25:30,425 - INFO: FSObject(name='__pycache__', ext='', is_dir=True, parent='hw15_utils')

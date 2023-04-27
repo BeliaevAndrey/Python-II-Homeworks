@@ -2,7 +2,7 @@ import logging
 
 FORMAT = ("{asctime} - {levelname}: "
           "{msg}")
-logging.basicConfig(filename='hw15t01_file_list.txt', filemode='a', format=FORMAT, style='{', level=logging.NOTSET)
+logging.basicConfig(filename='hw15t01_file_list.txt', filemode='w', format=FORMAT, style='{', level=logging.NOTSET)
 common_log = logging.getLogger()
 
 
