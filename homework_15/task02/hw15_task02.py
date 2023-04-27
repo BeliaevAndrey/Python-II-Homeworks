@@ -18,7 +18,7 @@ def file_search(start_path: str, file_ext: str) -> None:
         print(item)
 
 
-def arguments():
+def main():
     parser = argparse.ArgumentParser(description='hw15_task02')
     parser.add_argument('m', metavar='mode', help='Mode switch: "atm" for ATM, "files" for file recursive search')
     # parser.add_argument('files', metavar='FileLister', help='Start File-Lister task from homework 10')
@@ -31,10 +31,6 @@ def arguments():
         atm_task()
     elif args.m == 'files':
         file_search(args.p, args.e)
-
-
-def main():
-    arguments()
 
 
 if __name__ == '__main__':

@@ -1,3 +1,5 @@
 2023-04-27 15:50:59,348 - INFO: ATM started, operations: 0
 2023-04-27 15:51:15,124 - INFO: Action: taking money. Not enough money.
 2023-04-27 15:51:27,300 - INFO: Exiting ATM.
+2023-04-27 15:55:10,212 - INFO: ATM started, operations: 0
+2023-04-27 15:55:13,129 - INFO: Exiting ATM.
