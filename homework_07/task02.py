@@ -7,7 +7,7 @@
 #   принимать параметр расширение конечного файла.
 #   принимать диапазон сохраняемого оригинального имени. Например для
 #       диапазона [3, 6] берутся буквы с 3 по 6 из исходного имени файла.
-#       К ним прибавляетсяжелаемое конечное имя, если оно передано. Далее счётчик файлов и расширение.
+#       К ним прибавляется желаемое конечное имя, если оно передано. Далее счётчик файлов и расширение.
 import os
 
 
@@ -34,16 +34,16 @@ def grp_rename(number_digits_amt: int,
 
 
 def main():
-    os.chdir('/homework_07/out_dir_task02')
+    os.chdir('/home/andrew/Documents/geekbrains/Python2023/Homeworks/homework_07/out_dir_task02')
     result = grp_rename(number_digits_amt=4,
-                        src_extension='txt',
+                        src_extension='ext2',
                         origin_range=(3, 6),
-                        dst_extension='aaatxt',
+                        dst_extension='ext3',
                         )
     print(''.join([f'File: {item[0]} moved to: {item[1]}\n' for item in result]))
 
     result = grp_rename(number_digits_amt=4,
-                        src_extension='ext1',
+                        src_extension='other',
                         origin_range=(6, 16),
                         dst_extension='ext001',
                         )

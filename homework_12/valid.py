@@ -1,5 +1,3 @@
-import csv
-from typing import Any
 SUBJECTS_FILE = 'subjects.csv'
 
 

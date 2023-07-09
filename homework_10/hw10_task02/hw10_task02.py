@@ -4,55 +4,33 @@
 #   - Внутри класса создайте экземпляр на основе переданного типа и верните
 #   его из класса-фабрики.
 from sem10_task_05 import Mammal, Bird, Fish, Animal
+from typing import Any
 
 
 class AnimalFabric:
-    _tmp_parameters = {}
 
-    @classmethod
-    def build(cls, animal_type: str,
-              name: str, age: int,
-              color: str = None,
-              voice: str = None,
-              hair: str = None,
-              ) -> Animal:
-        cls._tmp_parameters = dict(name=name, age=age,
-                                   color=color,
-                                   voice=voice,
-                                   hair=hair)
-        return cls._choice(animal_type)
-
-    @classmethod
-    def _choice(cls, animal_type):
-        match animal_type:
-            case 'Mammal':
-                return cls._create_mammal(**cls._tmp_parameters)
-            case 'Bird':
-                return cls._create_bird(**cls._tmp_parameters)
-            case 'Fish':
-                return cls._create_fish(**cls._tmp_parameters)
-            case _:
-                return Animal('Cadaver', 1000)
-
-    @classmethod
-    def _create_mammal(cls, name, age, voice, hair, **_) -> Mammal:
-        return Mammal(name=name, age=age, voice=voice, hair=hair, )
-
-    @classmethod
-    def _create_bird(cls, name, age, color, voice, **_) -> Bird:
-        return Bird(name=name, age=age, color=color, voice=voice)
-
-    @classmethod
-    def _create_fish(cls, name, age, color, **_) -> Fish:
-        return Fish(name=name, age=age, color=color)
+    def __new__(cls, animal_type, *args, **kwargs) -> [Mammal, Bird, Fish, Animal, Any]:
+        try:
+            tmp = super().__new__(animal_type)
+            tmp.__init__(*args, **kwargs)
+            return tmp
+        except Exception as exc:
+            print(f'{exc.__class__.__name__} {exc}')
+            return Animal("Cadaver", 1000)
 
 
 def main():
-    dog = AnimalFabric.build(animal_type='Mammal', name='Fido', age=5, voice='Woof!', hair='Pale, long')
-    fish = AnimalFabric.build(animal_type='Fish', name='Vanda', age=1, color='Rainbow')
-    bird = AnimalFabric.build(animal_type='Bird', name='Carl', age=8, color='Black', voice='CRAW!')
-    unidentified = AnimalFabric.build(animal_type='Non-type', name='Fail-Tester',
+    dog = AnimalFabric(Mammal, name='Fido', age=5, voice='Woof!', hair='Pale, long')
+    fish = AnimalFabric(Fish, name='Vanda', age=1, color='Rainbow')
+    bird = AnimalFabric(Bird, name='Carl', age=8, color='Black', voice='CRAW!')
+    unidentified = AnimalFabric('Non-type', name='Fail-Tester',
                                       age=100, color='Green', voice='Boo', hair='blonde')
+
+    # dog = AnimalFabric.build(animal_type='Mammal', name='Fido', age=5, voice='Woof!', hair='Pale, long')
+    # fish = AnimalFabric.build(animal_type='Fish', name='Vanda', age=1, color='Rainbow')
+    # bird = AnimalFabric.build(animal_type='Bird', name='Carl', age=8, color='Black', voice='CRAW!')
+    # unidentified = AnimalFabric.build(animal_type='Non-type', name='Fail-Tester',
+    #                                   age=100, color='Green', voice='Boo', hair='blonde')
     print(dog.get_info(), '\n')
     print(fish.get_info(), '\n')
     print(bird.get_info(), '\n')

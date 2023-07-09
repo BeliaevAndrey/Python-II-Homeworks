@@ -1,4 +1,3 @@
-import csv
 from valid import Naming, Marks
 
 _LO_LIM_MARKS = 2

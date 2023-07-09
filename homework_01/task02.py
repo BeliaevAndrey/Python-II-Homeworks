@@ -8,6 +8,16 @@
 
 
 def triangle(sides: tuple) -> None:
+    """
+    >>> triangle((3, 4, 5,))
+    Треугольник разносторонний
+    >>> triangle((5, 5, 5,))
+    Треугольник равносторонний
+    >>> triangle((2, 10, 8,))
+    Треугольник не существует.
+    >>> triangle((9, 8, 8,))
+    Треугольник равнобедренный
+    """
     for side in sides:
         if side >= sum(sides) - side:
             print("Треугольник не существует.")
@@ -37,4 +47,6 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    import doctest
+    doctest.testmod(verbose=True)
+    # main()

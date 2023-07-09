@@ -18,7 +18,7 @@ def jsn_writer(in_dct: dict, path: str, file_name: str) -> None:
 
 def csv_writer(in_dct: dict, path: str, file_name: str) -> None:
     file_path = os.path.join(path, file_name + '.csv')
-    data = [['Basic_path', 'unit_type',  'unit_name', 'unit_size', ' parent_dir', ]]
+    data = [['Basic_path', 'unit_type', 'unit_name', 'unit_size', ' parent_dir', ]]
     for i_key, i_val in in_dct.items():
         data.append([i_key, *i_val.values()])
     with open(file_path, 'w', encoding='utf-8') as f_out:
@@ -37,15 +37,17 @@ def dct_formatter(total_dct: dict[str, dict[str]],
                   item_name: str,
                   item_type: str) -> None:
     if item_type == 'F':
-        total_dct[path] = dict(unit_type='File',
-                               unit_name=item_name,
-                               unit_size=os.path.getsize(os.path.join(path, item_name)),
-                               parent_dir=os.path.split(path)[-1])
+        total_dct[os.path.join(path, item_name)] = dict(
+            unit_type='File',
+            unit_name=item_name,
+            unit_size=os.path.getsize(os.path.join(path, item_name)),
+            parent_dir=os.path.split(path)[-1])
     elif item_type == 'D':
-        total_dct[path] = dict(unit_type='Directory',
-                               unit_name=item_name,
-                               unit_size=count_size(os.path.join(path, item_name)),
-                               parent_dir=os.path.split(os.path.abspath(path))[-1])
+        total_dct[os.path.join(path, item_name)] = dict(
+            unit_type='Directory',
+            unit_name=item_name,
+            unit_size=count_size(os.path.join(path, item_name)),
+            parent_dir=os.path.split(os.path.abspath(path))[-1])
 
 
 def count_size(count_path: str,
@@ -71,6 +73,7 @@ def dir_walker(aim_path: str,
                       'D')
 
     for item in os.listdir(aim_path):
+        print(item)
         check_path = os.path.join(aim_path, item)
         if os.path.isfile(check_path):
             dct_formatter(total_dct, aim_path, item, 'F')
@@ -91,7 +94,7 @@ def dict_printer(in_dict: dict) -> None:
 
 
 def main():
-    tst_path = '/home/andrew/Documents/geekbrains/Python2023/Homeworks/'
+    tst_path = '/home/andrew/Documents/geekbrains/Python2023/Homeworks'
     result = dir_walker(tst_path)
     jsn_writer(result, os.getcwd(), 'result')
     pcl_writer(result, os.getcwd(), 'result')

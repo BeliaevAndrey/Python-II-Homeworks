@@ -3,7 +3,7 @@
 # Для каждого класса создайте метод, выводящий информацию специфичную для данного класса.
 
 class Animal:
-    def __init__(self, name: str, age: int):
+    def __init__(self, name: str, age: int, **_):
         self.name = name
         self.age = age
 
@@ -15,7 +15,7 @@ class Animal:
 
 class Mammal(Animal):
 
-    def __init__(self, name: str, age: int, hair: str, voice: str):
+    def __init__(self, name: str, age: int, hair: str, voice: str, **_):
         super().__init__(name, age)
         self.hair = hair
         self.voice = voice
@@ -29,7 +29,7 @@ class Mammal(Animal):
 
 class Bird(Animal):
 
-    def __init__(self, name: str, age: int, color: str, voice: str):
+    def __init__(self, name: str, age: int, color: str, voice: str, **_):
         super().__init__(name, age)
         self.color = color
         self.voice = voice
@@ -43,7 +43,7 @@ class Bird(Animal):
 
 class Fish(Animal):
 
-    def __init__(self, name: str, age: int, color: str):
+    def __init__(self, name: str, age: int, color: str, **_):
         super().__init__(name, age)
         self.color = color
 
