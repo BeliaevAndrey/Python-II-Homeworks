@@ -66,9 +66,11 @@ class ChessBoard:
     def __str__(self) -> str:
         out_str = '  '
         out_str += ''.join([f'{c: ^3}' for c in 'abcdefgh']) + '\n'
-        out_str += f'\n'.join([f'{r_num:<2}' + ''.join([f'{i: ^3}' if i > 0
-                                                        else f'{".":^3}' for i in row])
-                               for r_num, row in enumerate(self._board, start=1)])
+        out_str += f'\n'.join([f'{r_num:<2}' +
+                               ''.join([f'{i: ^3}' if i > 0
+                                        else f'{".":^3}' for i in row])
+                               for r_num, row in enumerate(self._board, start=1)]
+                              )
         return out_str + '\n'
 
     def get_beaten(self) -> set:
@@ -97,4 +99,3 @@ if __name__ == '__main__':
     print(chess_board.set_placement("d8,a3,c5,e2,f4,g6,h3,b7"))
     print(chess_board.get_beaten())
     print(chess_board)
-

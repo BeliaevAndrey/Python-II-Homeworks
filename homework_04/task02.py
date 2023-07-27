@@ -1,5 +1,9 @@
 # Напишите функцию для транспонирования матрицы
 
+def transpose2(matrix: list[list[int]]) -> list[list[int]]:
+    return list(map(list, zip(*matrix)))
+
+
 def transpose(matrix: list[list[int]]) -> list[list[int]]:
     """
     Транспонирование — в линейной алгебре это операция над матрицами
@@ -41,10 +45,12 @@ def main():
     test_matrix = filler(2, 4)
     printer(test_matrix)
     printer(transpose(test_matrix))
+    printer(transpose2(test_matrix))
     test_matrix = filler(20, 10)
     print(f'{" SECOND ":*^80}')
     printer(test_matrix)
     printer(transpose(test_matrix))
+    printer(transpose2(test_matrix))
 
 
 if __name__ == '__main__':

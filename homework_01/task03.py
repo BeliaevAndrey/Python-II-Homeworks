@@ -3,7 +3,7 @@
 # делится нацело только на единицу и на себя”. Сделайте ограничение на ввод
 # отрицательных чисел и чисел больше 100 тысяч.
 
-def is_simple(num: int) -> bool:
+def is_prime(num: int) -> bool:
     if num == 2:
         return True
     if num < 2 or num % 2 == 0:
@@ -30,7 +30,7 @@ def main():
         if number < 2 or number > 1e5:      # единицу не относят к простым числам
             print('Требуется число в диапазоне 2 - 100 000.')
         else:
-            if is_simple(number):
+            if is_prime(number):
                 print(f'{number} -- простое\n')
             else:
                 print(f'{number} -- составное\n')

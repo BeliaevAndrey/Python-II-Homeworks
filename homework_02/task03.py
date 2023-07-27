@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import re
 import fractions
 
@@ -32,7 +34,7 @@ def calc_summ(first: tuple, second: tuple) -> str:
     upper = first[0] * second[1] + first[1] * second[0]
     lower = first[1] * second[1]
     divisor = gcd(upper, lower)
-    if lower/divisor == 1:
+    if lower / divisor == 1:
         return str(upper)
     return f'{int(upper / divisor)}/{int(lower / divisor)}'
 
@@ -47,7 +49,7 @@ def calc_mult(first: tuple, second: tuple) -> str:
     upper = first[0] * second[0]
     lower = first[1] * second[1]
     divisor = gcd(upper, lower)
-    if lower/divisor == 1:
+    if lower / divisor == 1:
         return str(upper)
     return f'{int(upper / divisor)}/{int(lower / divisor)}'
 
