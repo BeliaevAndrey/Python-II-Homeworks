@@ -2,8 +2,8 @@ from random import randint as r_int, uniform as r_unf
 import csv
 from hw09t02_decorators import starting_decor, dump_to_json_dec
 
-STRINGS_LO_LIM = 100
-STRINGS_HI_LIM = 1000
+STRINGS_LO_LIM = 10
+STRINGS_HI_LIM = 100
 CFT_RANGE_LO_LIM = -10
 CFT_RANGE_HI_LIM = 10
 SRC_FILE_NAME = 'tst_cft_src.csv'
@@ -46,7 +46,7 @@ def square_eq_root(a_cft: float, b_cft: float, c_cft: float) -> [float, tuple[fl
 
 
 def main():
-    print(square_eq_root(-1.54, 4.467, 9.188))
+    # print(square_eq_root(-1.54, 4.467, 9.188))
     gen_csv_rand_nums(SRC_FILE_NAME, tst_mode=False)
     results = square_eq_root()
     print('|{:^7}|{:^10}|{:^10}|{:^10}||{:^20}|'.format(*results[0]))

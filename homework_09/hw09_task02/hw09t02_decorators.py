@@ -59,7 +59,6 @@ def starting_decor(file_name: str) -> Callable:
             a_table[0].append('Result')
             for i in range(1, len(a_table)):
                 a_table[i].append(func(*a_table[i][1:]))
-                # print(a_table[i])
 
             return a_table
 
@@ -93,6 +92,7 @@ def dump_to_json_dec(file_name: str) -> Callable:
             result = func(*args)
             param_res[-1]['result'] = result
             _dump_json_para(file_name, param_res)
+            print(f'{call_count=} {len(param_res)=}')
             return result
 
         return wrapper
