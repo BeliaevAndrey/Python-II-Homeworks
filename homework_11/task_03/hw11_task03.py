@@ -59,10 +59,15 @@ class Matrix:
             raise TypeError("Not a matrix type!")
         if self._cols != other._rows:
             raise ValueError("Matrices rows amt is to be equal other matrix cols amt")
-        new_matrix = [[0] * other._rows for _ in range(self._rows)]
+        new_matrix = [[0] * other._cols for _ in range(self._rows)]
         for i in range(self._rows):
-            for j in range(other._rows):
-                new_matrix[i][j] = self._matrix[i][j] * other._matrix[j][i]
+            for j in range(other._cols):
+                for k in range(other._rows):
+                    new_matrix[i][j] += self._matrix[i][k] * other._matrix[k][j]
+        # new_matrix = [[sum([self._matrix[i][k] * other._matrix[k][j]
+        #                     for k in range(other._rows)])
+        #               for j in range(other._cols)]
+        #               for i in range(self._rows)]
         return Matrix(new_matrix)
 
     def __str__(self):
@@ -71,7 +76,6 @@ class Matrix:
     def __repr__(self):
         """String object representation method"""
         return f'Matrix({self._matrix})'
-
 
 
 def main():
