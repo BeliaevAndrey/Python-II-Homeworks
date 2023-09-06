@@ -29,7 +29,7 @@ class Student:
 
     def __str__(self):
         return (f'\n{"=" * 60}'
-                f'\n{self._first_name} {self._patronymic} {self._last_name}'
+                f'\n{self.first_name} {self.patronymic} {self.last_name}'
                 f'\nAverage mark on whole subjects: {self.get_marks_average()}'
                 f'\nAverage tests balls for every subject:'
                 f'\n{self.averages_str()}'

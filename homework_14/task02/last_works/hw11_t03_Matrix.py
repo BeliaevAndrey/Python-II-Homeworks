@@ -91,10 +91,11 @@ class Matrix:
             raise MatrixTypeError(other)
         if self._cols != other._rows:
             raise MatrixMultiplyError
-        new_matrix = [[0 for _ in range(other.rows)] for _ in range(self._rows)]
-        for j in range(self._rows):
-            for i in range(other.rows):
-                new_matrix[j][i] = self._a_matrix[j][i] * other.a_matrix[i][j]
+        new_matrix = [[0] * other._cols for _ in range(self._rows)]
+        for i in range(self._rows):
+            for j in range(other._cols):
+                for k in range(other._rows):
+                    new_matrix[i][j] += self._a_matrix[i][k] * other._a_matrix[k][j]
         return Matrix(new_matrix)
 
     def __eq__(self, other) -> bool:
@@ -125,4 +126,6 @@ class Matrix:
 
 
 if __name__ == '__main__':
-    print('Now it\'s a module')
+    # print('Now it\'s a module')
+    print(repr(Matrix([[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]]) * Matrix(
+        [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12]])))

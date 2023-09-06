@@ -43,6 +43,11 @@ class Matrix:
         return True
 
     def __mul__(self, other):
+        """
+        Calculates a multiplication of matrices or multiplication the matrix by a number
+        :param other: [int, float, Matrix]    -- other Matrix object
+        :return: Matrix                       -- new Matrix object
+        """
         if isinstance(other, Matrix):
             return self.__rmul__(other)
         if isinstance(other, (int, float)):

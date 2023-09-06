@@ -56,7 +56,7 @@ class Matrix:
         if isinstance(other, self.__class__):
             return self.__rmul__(other)
         elif isinstance(other, int) or isinstance(other, float):
-            new_matrix = [[0 for _ in range(self._cols)] for _ in range(self._rows)]
+            new_matrix = [[0] * self._cols for _ in range(self._rows)]
             for j in range(self._rows):
                 for i in range(self._cols):
                     new_matrix[j][i] = self.a_matrix[j][i] * other
@@ -75,10 +75,11 @@ class Matrix:
         # if self._cols != other._rows:
         #     raise ValueError("Operation not permitted if rows amount of first matrix "
         #                      "is not equal to columns amount of other one")
-        new_matrix = [[0 for _ in range(other.rows)] for _ in range(self._rows)]
-        for j in range(self._rows):
-            for i in range(other.rows):
-                new_matrix[j][i] = self._a_matrix[j][i] * other.a_matrix[i][j]
+        new_matrix = [[0] * other._cols for _ in range(self._rows)]
+        for i in range(self._rows):
+            for j in range(other._cols):
+                for k in range(other._rows):
+                    new_matrix[i][j] += self._a_matrix[i][k] * other._a_matrix[k][j]
         return Matrix(new_matrix)
 
     def __eq__(self, other) -> bool:
