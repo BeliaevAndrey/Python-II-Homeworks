@@ -14,7 +14,7 @@ def list_files(start_path: str,
     if 'pickle' in file_ext:
         file_ext = file_ext.replace('pickle', 'bin')
     if '.' not in file_ext:
-        file_ext = '.' + file_ext
+        file_ext = f'.{file_ext}'
     result_lst = [file_ext]
     for path_tlp in os.walk(start_path):
         for item in path_tlp[2]:
@@ -39,7 +39,7 @@ def convert_files(file_lst: list,
         print("Extension '.bin' will be used")
         dst_file_type = 'bin'
     if '.' not in dst_file_type:
-        dst_file_type = '.' + dst_file_type
+        dst_file_type = f'.{dst_file_type}'
 
     src_ext = file_lst.pop(0)
     for file_path in file_lst:
@@ -57,7 +57,7 @@ def convert_files(file_lst: list,
             case ('.bin', '.csv'):
                 pair_converter(pickle_reader, csv_writer, file_path, dst_path)
             case _:
-                raise ValueError("Unknown types:" + f'{(src_ext, dst_file_type)}')
+                raise ValueError(f'Unknown types: {(src_ext, dst_file_type)}')
 
 
 def main():
