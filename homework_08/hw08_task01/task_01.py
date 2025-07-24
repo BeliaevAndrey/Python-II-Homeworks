@@ -32,7 +32,7 @@ def pcl_writer(in_dct: dict, path: str, file_name: str) -> None:
         pickle.dump(in_dct, f_out)
 
 
-def dct_formatter(total_dct: dict[str, dict[str]],
+def dct_formatter(total_dct: dict[str, dict[str, str]],
                   path: str,
                   item_name: str,
                   item_type: str) -> None:
@@ -63,7 +63,7 @@ def count_size(count_path: str,
 
 
 def dir_walker(aim_path: str,
-               total_dct: dict = None) -> dict[str, dict[str]]:
+               total_dct: dict = None) -> dict[str, dict[str, str]]:
     if total_dct is None:
         total_dct = {}
         basic_path = os.path.split(os.path.abspath(aim_path))

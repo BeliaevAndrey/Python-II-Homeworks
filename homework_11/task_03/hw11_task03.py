@@ -24,7 +24,7 @@ class Matrix:
         if not isinstance(other, Matrix):
             raise TypeError("Not a matrix type!")
         if self._rows != other._rows or self._cols != other._cols:
-            raise ValueError("Matrices are to be equal dimensions")
+            raise ValueError("Matrices are to have equal dimensions")
         new_matrix = [[0] * self._cols for _ in range(self._rows)]
         for i in range(self._rows):
             for j in range(self._cols):
@@ -84,8 +84,8 @@ class Matrix:
 
 
 def main():
-    mtx_a = Matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12]])
-    mtx_b = Matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12]])
+    mtx_a = Matrix([[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12], [13, 14, 15, 16]])
+    mtx_b = Matrix([[0.1, 0.2, 0.3, 0.4], [0.5, 0.6, 0.7, 0.8], [0.9, 1, 1.1, 1.2], [1.3, 1.4, 1.5, 1.6]])
     mtx_c = Matrix([[10, 11, 12], [4, 5, 6], [1, 2, 3], [7, 8, 9]])
     mtx_d = Matrix([[1, 2, 3, 4, ], [5, 6, 7, 8], [9, 10, 11, 12]])
     print(repr(mtx_a))
@@ -99,14 +99,20 @@ def main():
     print(f'{mtx_b == mtx_c=}')
     print(f'{mtx_b != mtx_c=}')
     print(f'{mtx_c != mtx_d=}')
-    print(mtx_a + mtx_b)
-    print(mtx_a + mtx_c)
+    try:
+        print(mtx_a + mtx_b)
+    except ValueError as exc:
+        print(f'FAIL! {exc.__class__.__name__}: {exc}')
+    try: 
+        print(mtx_a + mtx_c)
+    except ValueError as exc:
+        print(f'FAIL! {exc.__class__.__name__}: {exc}')
     try:
         print(mtx_c + mtx_d)
     except ValueError as exc:
         print(f'FAIL! {exc.__class__.__name__}: {exc}')
     try:
-        print(mtx_a * mtx_b)
+        print('MULTIPLY IS HERE:\n', mtx_a * mtx_b, sep='')
     except ValueError as exc:
         print(f'FAIL! {exc.__class__.__name__}: {exc}')
     try:
